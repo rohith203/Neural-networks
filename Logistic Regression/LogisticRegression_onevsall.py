@@ -124,16 +124,23 @@ if __name__ == "__main__":
     for i in unique_classes[1:]:
         y_cat = np.concatenate((y_cat,(y==i).astype('int').values.reshape(-1,1)),axis=1)
     
+    y_pred = np.ndarray((y.shape[0],num_classes))
     for c in range(num_classes):
         models[c].train(X,y_cat[:,c],0.1,100,'batch')
-        y_pred = models[c].test(X)
-        for i in range(y_pred.shape[0]):
-            y_pred[i] = 0 if y_pred[i]<0.5 else 1
-        print("Class: ", unique_classes[c], " vs all")
-        print(y_pred)
+        y_pred[:,c] = models[c].test(X)
+        
+#        for i in range(y_pred.shape[0]):
+#            y_pred[i] = 0 if y_pred[i]<0.5 else 1
+#        print("Class: ", unique_classes[c], " vs all")
+#        print(y_pred)
+#    
+#        from sklearn.metrics import accuracy_score
+#        print(accuracy_score(y_cat[:,c],y_pred))
     
-        from sklearn.metrics import accuracy_score
-        print(accuracy_score(y_cat[:,c],y_pred))
+    
+    y_t = np.argmax(y_pred, axis=1)+1
+    
+    print("Accuracy : ",sum(y_t==y)/y.shape[0])
     
     # Confusion Matrix
     conf_mat = np.ndarray((num_classes, num_classes))
