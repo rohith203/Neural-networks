@@ -62,11 +62,8 @@ class MinMaxScaler:
 if __name__ == "__main__":
     
 
-#    data = pd.read_csv("./data.csv", header=None)
     data = pd.read_excel("./data2.xlsx",header=None)
-    # print(data)
     X = data.copy()
-#    mscaler = MinMaxScaler()
     mscaler = NormalScaler()
     for j in range(X.shape[1]):
         mscaler.fit(X[j])
@@ -74,9 +71,15 @@ if __name__ == "__main__":
         
     model = KMeans(X,2)
     
-    model.run(50)
-    
+    model.run(10)
+    y = model.assignments
     plt.plot(model.cost_arr)
-    plt.scatter(X[0],X[2],c=model.assignments)
-    
-    
+    plt.show()
+    plt.scatter(X[0],y,c=model.assignments)
+    plt.show()
+    plt.scatter(X[1],y,c=model.assignments)
+    plt.show()
+    plt.scatter(X[2],y,c=model.assignments)
+    plt.show()
+    plt.scatter(X[3],y,c=model.assignments)
+    plt.show()
