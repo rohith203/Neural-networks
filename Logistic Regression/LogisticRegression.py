@@ -107,6 +107,8 @@ if __name__ == "__main__":
     model = LogisticRegression()
 
     data = pd.read_excel("./data3.xlsx",header=None)
+    
+    data = data.sample(frac=1).reset_index(drop=True)
     # print(data)
     X = data[[0,1,2,3]]
     y = data[4]-1
@@ -124,25 +126,23 @@ if __name__ == "__main__":
     y_test = y[int(train_percent*X.shape[0]):]
     
     model.train(X_train,y_train,0.1,100,'batch')   
-    
-    
-    print("Training set accuracy: ")
+
+# Testing on train set    
     y_pred = model.test(X_train)
     for i in range(y_pred.shape[0]):
         y_pred[i] = 0 if y_pred[i]<0.5 else 1
 
-    print(y_pred)
+    print('\n',y_pred)
+    print("\nTraining set accuracy: ",sum(y_pred==y_train)/y_train.shape[0])
+    print("Training set sensitivity: ",sum((y_pred==1) & (y_train==1))/sum(y_train==1))
+    print("Training set specificity: ",sum((y_pred==0) & (y_train==0))/sum(y_train==0))
 
-    from sklearn.metrics import accuracy_score
-    print(accuracy_score(y_train,y_pred))
-
-
-    print("Testing set accuracy: ")
+# Testing on test set
     y_pred = model.test(X_test)
     for i in range(y_pred.shape[0]):
         y_pred[i] = 0 if y_pred[i]<0.5 else 1
 
-    print(y_pred)
-
-    from sklearn.metrics import accuracy_score
-    print(accuracy_score(y_test,y_pred))
+    print('\n',y_pred)
+    print("\nTesting set accuracy: ",sum(y_pred==y_test)/y_test.shape[0])
+    print("Training set sensitivity: ",sum(y_pred*y_test)/sum(y_test))
+    print("Training set specificity: ",sum((y_pred==0) & (y_test==0))/sum(y_test==0))
