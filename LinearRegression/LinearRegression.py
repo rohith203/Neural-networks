@@ -22,7 +22,7 @@ class LinearRegression:
         This method initializes the weight matrix
         as a column vector with shape = (X rows+1, 1)
         """
-        np.random.seed(2)
+        np.random.seed(11)
         self.W = np.random.randn(s[1],1)
         self.W_arr = []
         self.cost_arr = []
@@ -50,7 +50,6 @@ class LinearRegression:
         with the given weights W.
 			h_w (x^i )=∑_(j=0)^n▒〖w_j 〖x^i〗_j 〗=x^i w
         """
-        h_i = 0
         h_i = np.matmul(X[i].reshape(1,-1),W)
         return h_i[0][0]
 
@@ -107,6 +106,9 @@ class LinearRegression:
                 self.W = W_new.copy()
             self.cost_arr.append(self.get_cost(X, y, self.W))
             self.W_arr.append(self.W)
+            if len(self.W_arr)>1:
+                if sum(abs(self.W_arr[-2]-self.W_arr[-1]))<0.0001:
+                    break
         return self.W
 
     def train(self, X, y, alpha, max_iter=100, option="batch"):
@@ -148,7 +150,7 @@ if __name__ == "__main__":
     model = LinearRegression()
 
     # data input
-    data = pd.read_csv("./data.csv", header=None)
+    data = pd.read_excel("./data.xlsx", header=None)
     X = data.loc[:,0:1].values
     y = data.loc[:,2].values
 
@@ -162,11 +164,12 @@ if __name__ == "__main__":
     # Training the model by choosing alpha and max_iter values.
 	# gradient descent algorithm can be set as either ‘batch’ or ‘stochastic’
 	# in this function call.
-    alpha = 0.05
-    max_iter = 400
-    algo = 'batch'
+    alpha = 0.007
+    algo = 'stochastic'
+    # alpha = 0.26
+    # algo = 'batch'
+    max_iter = 100
     arr = model.train(X,y,alpha,max_iter,algo)
-    # arr = model.train(X,y,0.19,250,"stochastic")
     
     print("weights: ",model.W)
     print("Total Cost: ",model.cost)
@@ -175,9 +178,9 @@ if __name__ == "__main__":
 
     W_arr = np.array(model.W_arr)
     res = 100
-    
-    xx = np.linspace(np.min(W_arr[:,1])-10, np.max(W_arr[:,1])+10, res)
-    yy = np.linspace(np.min(W_arr[:,2])-10, np.max(W_arr[:,2])+10, res)
+    bounds = [2,0.6]
+    xx = np.linspace((np.min(W_arr[:,1])-bounds[0]), (np.max(W_arr[:,1])+bounds[0]), res)
+    yy = np.linspace(np.min(W_arr[:,2])-bounds[1], np.max(W_arr[:,2])+bounds[1]+1, res)
     minw0 = W_arr[-1][0][0]
 
     r = np.ndarray((res,res))
@@ -193,13 +196,13 @@ if __name__ == "__main__":
     # 3d surface plot of cost function and learning curve
     ax = plt.axes(projection='3d')
     ax.plot_surface(r, s, z,cmap='coolwarm')
-    ax.plot(W_arr[:,1], W_arr[:,2], model.cost_arr,c='red')
+    # ax.plot(W_arr[:,1], W_arr[:,2], model.cost_arr,c='red')
     ax.text2D(0.05, 0.95, "3D surface plot of cost function ({2})\n alpha={0} max_iter={1}".format(alpha,max_iter,algo), transform=ax.transAxes)
     ax.set_xlabel("w1")
     ax.set_ylabel("w2")
     ax.set_zlabel("cost")
-    plt.savefig("./Results/lin_reg/{2}_{0}_{1}_surf.png".format(alpha,max_iter,algo))
-    # plt.show()
+    # plt.savefig("./Results/lin_reg/{2}_{0}_{1}_surf.png".format(alpha,max_iter,algo))
+    plt.show()
 
     # 2d contour plot of cost function
     plt.figure()
@@ -207,9 +210,10 @@ if __name__ == "__main__":
     plt.xlabel("w1")
     plt.ylabel("w2")
     plt.contour(r,s,z.reshape(res,res),levels=25)
-    plt.scatter(W_arr[:,1].ravel(),W_arr[:,2].ravel(),c=model.cost_arr)
-    plt.savefig("./Results/lin_reg/{2}_{0}_{1}_contour.png".format(alpha,max_iter,algo))
-    # plt.show()
+    # plt.scatter(W_arr[:,1].ravel(),W_arr[:,2].ravel(),c=model.cost_arr)
+    plt.plot(W_arr[:,1].ravel(),W_arr[:,2].ravel())
+    # plt.savefig("./Results/lin_reg/{2}_{0}_{1}_contour.png".format(alpha,max_iter,algo))
+    plt.show()
     
     # 2d line plot of cost vs iteration
     plt.figure()
@@ -217,5 +221,6 @@ if __name__ == "__main__":
     plt.title("Cost Function vs iteration plot ({2})\n alpha={0} max_iter={1}".format(alpha,max_iter,algo))
     plt.xlabel("iteration")
     plt.ylabel("cost")
-    plt.savefig("./Results/lin_reg/{2}_{0}_{1}_cost_iter.png".format(alpha,max_iter,algo))
-    # plt.show()
+    # plt.savefig("./Results/lin_reg/{2}_{0}_{1}_cost_iter.png".format(alpha,max_iter,algo))
+
+    plt.show()
