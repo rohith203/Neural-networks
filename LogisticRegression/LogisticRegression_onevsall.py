@@ -1,3 +1,6 @@
+"""
+This file contains the implementation One vs All classifier
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -5,7 +8,7 @@ from mpl_toolkits.mplot3d import Axes3D
 from LogisticRegression import LogisticRegression,NormalScaler
 
 if __name__ == "__main__":
-
+    # data input
     data = pd.read_excel("./data4.xlsx",header=None)
     data = data.sample(frac=1).reset_index(drop=True)
 
@@ -25,7 +28,8 @@ if __name__ == "__main__":
     y_cat = (y==unique_classes[0]).astype('int').values.reshape(-1,1)
     for i in unique_classes[1:]:
         y_cat = np.concatenate((y_cat,(y==i).astype('int').values.reshape(-1,1)),axis=1)
-    
+
+    # splitting data using holdout cross validation
     train_percent = 0.6
     X_train = X[:int(train_percent*X.shape[0])]
     y_train = y[:int(train_percent*X.shape[0])]
@@ -34,15 +38,17 @@ if __name__ == "__main__":
     y_test = y[int(train_percent*X.shape[0]):]
     y_cat_test = y_cat[int(train_percent*X.shape[0]):]
     
+    # creating a Logistic regression model for each class
     models = [LogisticRegression() for i in unique_classes]
     
     y_train_pred = np.ndarray((y_train.shape[0],num_classes))
-    for c in range(num_classes):
-        models[c].train(X_train,y_cat_train[:,c],0.1,100,'batch')
-        y_train_pred[:,c] = models[c].test(X_train)
-    
     y_test_pred = np.ndarray((y_test.shape[0],num_classes))
     for c in range(num_classes):
+        # training 
+        models[c].train(X_train,y_cat_train[:,c],0.26,100,'batch')
+        y_train_pred[:,c] = models[c].test(X_train)
+    
+        # testing
         y_test_pred[:,c] = models[c].test(X_test)
         y_p = (y_test_pred[:,c]>0.5)
         print("Class ",unique_classes[c]," Accuracy = ", sum(y_p==(y_test==unique_classes[c]))/(X_test.shape[0]))
@@ -60,8 +66,3 @@ if __name__ == "__main__":
             conf_mat[i][j] = sum((y_test_t==unique_classes[i]) & (y_test==unique_classes[j]))
     
     print(conf_mat)
-        
-
-    
-    
-    

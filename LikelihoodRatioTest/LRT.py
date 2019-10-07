@@ -2,39 +2,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from mpl_toolkits.mplot3d import Axes3D
-
-
-class NormalScaler:
-    
-    def fit(self, arr):
-        self.mean = np.mean(arr)
-        self.std = np.std(arr)
-        
-    def transform(self, arr):
-        return (arr-self.mean)/(self.std)
-        
-
-class MinMaxScaler:
-    
-    def fit(self, arr):
-        self.min = np.min(arr)
-        self.max = np.max(arr)
-        
-    def transform(self, arr):
-        return (arr-self.min)/(self.max-self.min)
-
-    def inv_transform(self, arr):
-        return arr*(self.max-self.min)+self.min
-    
+from preprocessing import NormalScaler
     
 def likelihood(x, n, cov, mu, cov_det, cov_inv):
+    """
+        Likelihood of x given y = k
+    """
     p = 1/(((2*np.pi)**(n/2))*((cov_det)**(0.5)))
     p *= np.exp(-0.5*(np.matmul(np.matmul((x-mu).T,cov_inv), x-mu)))
     return p[0][0]
     
 
 if __name__ == "__main__":
-
+    # data input
     data = pd.read_excel("./data3.xlsx",header=None)
     
     data = data.sample(frac=1).reset_index(drop=True)
@@ -47,7 +27,8 @@ if __name__ == "__main__":
     for j in range(X.shape[1]):
         mscaler.fit(X[j])
         X[j] = mscaler.transform(X[j])
-        
+    
+    # splitting data using holdout cross validation
     train_percent = 0.6
     X_train = X[:int(train_percent*X.shape[0])].values
     y_train = y[:int(train_percent*X.shape[0])].values

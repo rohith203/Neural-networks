@@ -105,7 +105,7 @@ class LeastAngleRegression:
             for i in range(X.shape[0]):    
                 temp = np.matmul(X[i,:],self.W) - y[i]
                 for j in range(X.shape[1]):
-                    W_new[j][0] = self.W[j][0]-0.5*eta*alpha*np.sign(self.W[j][0]) - (alpha/X.shape[0])*temp*X[i,j]
+                    W_new[j][0] = self.W[j][0]-0.5*eta*alpha*np.sign(self.W[j][0]) - (alpha)*temp*X[i,j]
                 self.W = W_new.copy()
             self.cost_arr.append(self.get_cost(X, y, self.W))
             self.W_arr.append(self.W)
@@ -151,7 +151,7 @@ if __name__ == "__main__":
     model = LeastAngleRegression()
 
     # data input
-    data = pd.read_csv("./data.csv", header=None)
+    data = pd.read_excel("./data.xlsx", header=None)
     X = data.loc[:,0:1].values
     y = data.loc[:,2].values
 
@@ -169,6 +169,10 @@ if __name__ == "__main__":
     eta = 0.01
     max_iter = 150
     algo = 'batch'
+    # alpha = 0.0065
+    # eta = 0.01
+    # max_iter = 160
+    # algo = 'stochastic'
 
     arr = model.train(X,y,alpha,eta,max_iter,algo)
     print("weights: ",model.W)
@@ -176,13 +180,15 @@ if __name__ == "__main__":
     
     
     # visualization of cost function.
-
     W_arr = np.array(model.W_arr)
     res = 100
-    bounds = 10
-    xx = np.linspace(np.min(W_arr[:,1])-bounds, np.max(W_arr[:,1])+bounds, res)
-    yy = np.linspace(np.min(W_arr[:,2])-bounds, np.max(W_arr[:,2])+bounds, res)
+    bounds = [2,0.6]
+    xx = np.linspace((np.min(W_arr[:,1])-bounds[0]), (np.max(W_arr[:,1])+bounds[0]), res)
+    yy = np.linspace(np.min(W_arr[:,2])-bounds[1], np.max(W_arr[:,2])+bounds[1]+1, res)
     minw0 = W_arr[-1][0][0]
+    r = np.ndarray((res,res))
+    s = np.ndarray((res,res))
+    z = np.ndarray((res,res))
 
     r = np.ndarray((res,res))
     s = np.ndarray((res,res))
@@ -202,7 +208,7 @@ if __name__ == "__main__":
     ax.set_xlabel("w1")
     ax.set_ylabel("w2")
     ax.set_zlabel("cost")
-    plt.savefig("./Results/ridge_reg/{3}_{0}_{1}_{2}_surf.png".format(alpha,eta,max_iter,algo))
+    plt.savefig("./Results/lars_reg/{3}_{0}_{1}_{2}_surf.png".format(alpha,eta,max_iter,algo))
     plt.show()
 
     # 2d contour plot of cost function
@@ -212,7 +218,7 @@ if __name__ == "__main__":
     plt.ylabel("w2")
     plt.contour(r,s,z.reshape(res,res),levels=25)
     plt.scatter(W_arr[:,1].ravel(),W_arr[:,2].ravel(),c=model.cost_arr)
-    plt.savefig("./Results/ridge_reg/{3}_{0}_{1}_{2}_contour.png".format(alpha,eta,max_iter,algo))
+    plt.savefig("./Results/lars_reg/{3}_{0}_{1}_{2}_contour.png".format(alpha,eta,max_iter,algo))
     plt.show()
     
     # 2d line plot of cost vs iteration
@@ -221,5 +227,5 @@ if __name__ == "__main__":
     plt.title("Cost Function vs iteration plot ({3})\n alpha={0} eta={1} max_iter={2}".format(alpha,eta,max_iter,algo))
     plt.xlabel("iteration")
     plt.ylabel("cost")
-    plt.savefig("./Results/ridge_reg/{3}_{0}_{1}_{2}_cost_iter.png".format(alpha,eta,max_iter,algo))
+    plt.savefig("./Results/lars_reg/{3}_{0}_{1}_{2}_cost_iter.png".format(alpha,eta,max_iter,algo))
     plt.show()

@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import random
 from mpl_toolkits.mplot3d import Axes3D
+from preprocessing import NormalScaler
 
 class KMeans:
     def __init__(self, X, k):
@@ -22,9 +23,7 @@ class KMeans:
         return cost
     
     def run(self, max_iter=100):
-        
-        
-        for iteration in range(max_iter):
+        for _ in range(max_iter):
             # assigning points to their nearest center
             for i in range(X.shape[0]):
                 nearest_center_i = np.sum(np.square(X.iloc[i]-model.centers), axis=1).values.argmin()
@@ -33,53 +32,41 @@ class KMeans:
             # calculating mean of each cluster
             for i in range(self.k):
                 self.centers.iloc[i] = np.mean(X[self.assignments==i])
+            if len(self.cost_arr)>1 and abs(self.cost_arr[-2]-self.cost_arr[-1])==0:
+                break
             
-            
-
-class NormalScaler:
-    
-    def fit(self, arr):
-        self.mean = np.mean(arr)
-        self.std = np.std(arr)
-        
-    def transform(self, arr):
-        return (arr-self.mean)/(self.std)
-        
-
-class MinMaxScaler:
-    
-    def fit(self, arr):
-        self.min = np.min(arr)
-        self.max = np.max(arr)
-        
-    def transform(self, arr):
-        return (arr-self.min)/(self.max-self.min)
-
-    def inv_transform(self, arr):
-        return arr*(self.max-self.min)+self.min
-
-
 if __name__ == "__main__":
-    
-
+    # data input
     data = pd.read_excel("./data2.xlsx",header=None)
     X = data.copy()
+    # data Normalization
     mscaler = NormalScaler()
     for j in range(X.shape[1]):
         mscaler.fit(X[j])
         X[j] = mscaler.transform(X[j])
         
-    model = KMeans(X,2)
-    
-    model.run(10)
+    # initializing k-means with k value
+    k = 2
+    max_iter = 50
+    model = KMeans(X,k)
+    # running k-means algorithm
+    model.run(max_iter)
     y = model.assignments
+
+    print("minimum cost",model.cost_arr[-1])
+
+    # data visualization
+    plt.title("Cost Function vs iteration plot k={0}".format(k))
+    plt.xlabel("iteration")
+    plt.ylabel("cost")
     plt.plot(model.cost_arr)
+    plt.savefig("./Results/k_{0}.png".format(k))
     plt.show()
-    plt.scatter(X[0],y,c=model.assignments)
-    plt.show()
-    plt.scatter(X[1],y,c=model.assignments)
-    plt.show()
-    plt.scatter(X[2],y,c=model.assignments)
-    plt.show()
-    plt.scatter(X[3],y,c=model.assignments)
-    plt.show()
+
+    for i in range(4):
+        plt.title("Feature {0} vs y. k={1}".format(i+1, k))
+        plt.xlabel("Feature {0}".format(i+1))
+        plt.ylabel("y")
+        plt.scatter(X[i],y,c=model.assignments)
+        plt.savefig("./Results/k_{0}_{1}.png".format(k,i+1))
+        plt.show()

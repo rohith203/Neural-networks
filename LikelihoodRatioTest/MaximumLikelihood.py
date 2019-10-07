@@ -1,37 +1,16 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+from preprocessing import NormalScaler
 from mpl_toolkits.mplot3d import Axes3D
 
-
-class NormalScaler:
-    
-    def fit(self, arr):
-        self.mean = np.mean(arr)
-        self.std = np.std(arr)
-        
-    def transform(self, arr):
-        return (arr-self.mean)/(self.std)
-        
-
-class MinMaxScaler:
-    
-    def fit(self, arr):
-        self.min = np.min(arr)
-        self.max = np.max(arr)
-        
-    def transform(self, arr):
-        return (arr-self.min)/(self.max-self.min)
-
-    def inv_transform(self, arr):
-        return arr*(self.max-self.min)+self.min
-    
-    
 def likelihood(x, n, cov, mu, cov_det, cov_inv):
+    """
+        Likelihood of x given y = k
+    """
     p = 1/(np.power(2*np.pi,(n/2))*np.power(cov_det,0.5))
     p *= np.exp(-0.5*np.matmul(np.matmul((x-mu).T,cov_inv), x-mu))
     return p[0][0]
-
 
 if __name__ == "__main__":
     data = pd.read_excel("./data4.xlsx",header=None)
@@ -48,7 +27,8 @@ if __name__ == "__main__":
     for j in range(X.shape[1]):
         mscaler.fit(X[j])
         X[j] = mscaler.transform(X[j])
-    
+
+    # splitting data using holdout cross validation
     train_percent = 0.7
     X_train = X[:int(train_percent*X.shape[0])].values
     y_train = y[:int(train_percent*X.shape[0])].values
@@ -72,8 +52,7 @@ if __name__ == "__main__":
     
         y_test_t[i] = unique_classes[np.argmax(y_test_pred[i])]
     
-    
-    
+    # printing confusion matrix
     conf_mat = np.ndarray((num_classes, num_classes))
     for i in range(num_classes):
         for j in range(num_classes):
