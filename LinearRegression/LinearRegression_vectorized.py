@@ -74,7 +74,6 @@ if __name__ == "__main__":
     y = data.loc[:,2].values
 
     # data preprocessing (Normal Scaling)
-    print(X[:,0].mean())
     mscaler = NormalScaler()
     mscaler.fit(X[:,0])
     X[:,0] = mscaler.transform(X[:,0])

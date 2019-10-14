@@ -26,10 +26,10 @@ n = X.shape[1]
 # number of layers excluding output layer
 L = 3
 alpha = 0.5
-max_iter = 100
+max_iter = 150
 
 # number of neurons in each layer
-Layers = [n,16,8,1]
+Layers = [n,12,6,1]
 # Layers = [n,12,1]
 
 # list of weight matrices of each layer excluding bias weights
@@ -82,7 +82,7 @@ def cnt():
         cost2 += np.sum((A[L]-y_cat[i].reshape(-1,1))**2)
     print(cost1,cost2)
 
-batch_size = m
+batch_size = 12
 for iteration in range(max_iter):
     for i in range(0,m-batch_size+1,batch_size):
         for l in range(L): grad_b[l]=0

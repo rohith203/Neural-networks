@@ -164,10 +164,10 @@ if __name__ == "__main__":
     # Training the model by choosing alpha and max_iter values.
 	# gradient descent algorithm can be set as either ‘batch’ or ‘stochastic’
 	# in this function call.
-    alpha = 0.007
-    algo = 'stochastic'
-    # alpha = 0.26
-    # algo = 'batch'
+    # alpha = 0.007
+    # algo = 'stochastic'
+    alpha = 0.26
+    algo = 'batch'
     max_iter = 100
     arr = model.train(X,y,alpha,max_iter,algo)
     
