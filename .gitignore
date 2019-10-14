@@ -1,1 +1,9 @@
-.Untitled.ipynb
+*.png
+*.jpeg
+*.jpg
+*.docx
+*.doc
+*.pyc
+MLP_test.py
+MLP_scratch.py
+MLP_test2.py
