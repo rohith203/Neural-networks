@@ -33,6 +33,7 @@ class KMeans:
             for i in range(self.k):
                 self.centers.iloc[i] = np.mean(X[self.assignments==i])
             if len(self.cost_arr)>1 and abs(self.cost_arr[-2]-self.cost_arr[-1])==0:
+                print(self.centers)
                 break
             
 if __name__ == "__main__":
