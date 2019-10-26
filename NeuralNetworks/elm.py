@@ -5,6 +5,13 @@ from preprocessing import NormalScaler
 
 class ELM:
     def __init__(self, L, X, Y, activation="sigmoid"):
+        '''
+        In this constructor the hidden layer matrix
+        H is made using random weights a and b.
+        m: number of samples
+        n: number of features
+        L: number of neurons in the hidden layer
+        '''
         m = X.shape[0]
         n = X.shape[1]
         self.L = L
@@ -19,13 +26,22 @@ class ELM:
             for j in range(L):
                 H[i][j] = self.activate(X[i], self.a[j], self.b[j])
 
-        self.train(H,y_cat)
+        self.train(H,Y)
 
     def train(self, H, Y):
-        self.W = np.dot(np.linalg.pinv(H), y_cat)
+        '''
+        This function uses the following vectorized formula
+        to compute and return the weight matrix between 
+        hidden and output layer.
+        '''
+        self.W = np.dot(np.linalg.pinv(H), Y)
         return self.W
 
     def test(self, X_test, y_test):
+        '''
+        This function computes the predicted values with
+        the given test feature vectors.
+        '''
         y_pred = y_test.copy()
         acc = 0
         for i in range(X_test.shape[0]):
@@ -46,13 +62,19 @@ class ELM:
         return y_pred
 
     def gaussian(self,x,a,b):
+        '''
+        '''
         return np.exp(-b*np.sum(abs(x-a)))
     
     def tanh(self,x,a,b):
+        '''
+        '''
         tmp = np.exp(-(np.dot(x.reshape(1,-1), a.reshape(1,-1).T)[0][0] + b))
         return (1-tmp)/(1+tmp)
     
     def sigmoid(self, x,a,b):
+        '''
+        '''
         return 1/(1+np.exp(-(np.dot(x.reshape(1,-1), a.reshape(1,-1).T)[0][0] + b)))
 
 
@@ -62,7 +84,6 @@ if __name__=='__main__':
     data = pd.DataFrame(loadmat('./data5.mat')['x'])
     X = data.loc[:,:71].values
     y = data.loc[:,72:73].values
-    # y_cat = y.copy()
     y_cat = np.zeros((y.shape[0],2))
     for i in range(y.shape[0]):
         y_cat[i][int(y[i])] = 1
@@ -77,6 +98,6 @@ if __name__=='__main__':
     m = X.shape[0]
     # n = number of features
     n = X.shape[1]
-    L = 12
+    L = 128
     elm = ELM(L, X, y_cat, "sigmoid")
     elm.test(X,y_cat)

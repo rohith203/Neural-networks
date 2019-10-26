@@ -1,0 +1,29 @@
+
+
+ k = 4 function = cubic max_iter = 2 cost = 0.7719697006499451  accuracy = 0.9953488372093023
+
+ k = 4 function = cubic max_iter = 20 cost = 0.7775243556613773  accuracy = 0.9976744186046511
+
+ k = 4 function = cubic max_iter = 20 cost = 0.7775243556613773  accuracy = 0.9976744186046511
+
+ k = 4 function = cubic max_iter = 20 cost = 0.6747317455418033  accuracy = 1.0
+
+ k = 4 function = <function multiquadric at 0x000001CFBD40C378> max_iter = 20 cost = 0.6747317455418033  accuracy = 1.0
+
+ k = 4 function = <function multiquadric at 0x000001CFBA790E18> max_iter = 20 cost = 0.6747317455418033  accuracy = 1.0
+
+ k = 4 function = <function gaussian at 0x000001CFBE2FB400> max_iter = 20 cost = 0.5153874914439494  accuracy = 1.0
+
+ k = 4 function = <function gaussian at 0x000001CFBE1B3488> max_iter = 20 cost = 0.5153874914439494  accuracy = 1.0
+
+ k = 4 function = <function gaussian at 0x000001E76B28C1E0> max_iter = 20 cost = 0.5153874914439494  accuracy = 1.0
+
+ k = 4 function = <function gaussian at 0x000001FCA825C1E0> max_iter = 20 cost = 0.5153874914439494  accuracy = 1.0
+
+ k = 4 function = <function gaussian at 0x7f2c38d1c1e0> max_iter = 20 cost = 0.5153874914439494  accuracy = 1.0
+
+ k = 4 function = <function gaussian at 0x7fdb688c11e0> max_iter = 20 cost = 0.45668037923020605  accuracy = 1.0
+
+ k = 4 function = <function gaussian at 0x7ffb97d21ea0> max_iter = 20 cost = 0.4450278070782823  accuracy = 1.0
+
+ k = 4 function = <function gaussian at 0x7ffb97d21ea0> max_iter = 20 cost = 0.4450278070782823  accuracy = 1.0

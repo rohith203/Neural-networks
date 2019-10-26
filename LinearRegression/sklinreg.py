@@ -10,7 +10,7 @@ model = LinearRegression()
 # model = SGDRegressor()
 
 # data input
-data = pd.read_csv("./data.csv", header=None)
+data = pd.read_csv("./3D_spatial_network.csv", header=None)[::]
 X = data.loc[:,0:1].values
 y = data.loc[:,2].values
 

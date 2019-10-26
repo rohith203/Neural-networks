@@ -8,7 +8,6 @@ if __name__=='__main__':
     data = pd.DataFrame(loadmat('./data5.mat')['x'])
     X = data.loc[:,:71].values
     y = data.loc[:,72:73].values
-    # y_cat = y.copy()
     y_cat = np.zeros((y.shape[0],2))
     for i in range(y.shape[0]):
         y_cat[i][int(y[i])] = 1
@@ -19,7 +18,6 @@ if __name__=='__main__':
         scaler.fit(X[:,j])
         X[:,j] = scaler.transform(X[:,j])
 
-    # X = X[:,:30]
     # m = number of feature vectors
     m = X.shape[0]
     # n = number of features
@@ -33,27 +31,27 @@ if __name__=='__main__':
 
     # number of layers excluding output layer
     alpha = 0.5
-    max_iter = 2
+    max_iter = 10
 
     # pretraining 3 autoencoders
-    model11 = MLP([n, 50], ['sigmoid'])
+    model11 = MLP([n, 100], ['sigmoid'])
     print("training autoencoder 1")
     model11.train(X_train,X_train, alpha, 12, max_iter)
   
     out1 = model11.output_hidden(X_train)
 
-    model12 = MLP([50, 35], ['sigmoid'])
+    model12 = MLP([100, 60], ['sigmoid'])
     print("training autoencoder 2")
     model12.train(out1, out1, alpha, 12, max_iter)
     
     out2 = model12.output_hidden(out1)
 
-    model13 = MLP([35, 25], ['sigmoid'])
+    model13 = MLP([60, 40], ['sigmoid'])
     print("training autoencoder 3")
     model13.train(out2, out2, alpha, 12, max_iter)
 
     # stacking the pretrained autoencoders
-    model = MLP([n, 50, 35, 25], ['sigmoid','sigmoid','sigmoid'])
+    model = MLP([n, 100, 60, 40], ['sigmoid','sigmoid','sigmoid'])
     
     # initializing pretrained weights
     model.W_list[0] = model11.W_list[0]
@@ -67,4 +65,4 @@ if __name__=='__main__':
     
     # finetuning the stacked autoencoder
     print("training stacked autoencoder")
-    model.train(X_train, X_train, alpha, 12, 20)
+    model.train(X_train, X_train, alpha, 12, 100)

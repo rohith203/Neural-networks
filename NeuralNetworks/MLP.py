@@ -1,7 +1,9 @@
 import numpy as np
 import pandas as pd
 from scipy.io import loadmat
+import matplotlib.pyplot as plt
 from preprocessing import NormalScaler
+import time
 
 class MLP:
 
@@ -42,6 +44,10 @@ class MLP:
         # vectorized versions of activation functions
         self.relu_v = np.vectorize(self.relu)
         self.sigmoid_v = np.vectorize(self.sigmoid)
+
+        # arrays for plotting
+        self.acc_arr = {'train':[],'test':[]}
+        self.cost_arr = {'train':[],'test':[]}
     
     def compute_Z(self, l):
         '''
@@ -51,7 +57,7 @@ class MLP:
 
     def activation(self, Z, activ, deriv = 0):
         '''
-        This function return the activated output of a layer of neurons.
+        This function returns the activated output of a layer of neurons.
         '''
         if(activ=='sigmoid'):
             return self.sigmoid_v(Z, deriv)
@@ -103,13 +109,26 @@ class MLP:
                         self.grad_b[l-1] += np.mean(self.derr[l])
                         self.grad_W[l-1] += np.matmul(self.derr[l], self.A[l-1].T)
                 
+                # weight update after backpropogating each batch
                 for l in range(self.L, 0,-1):
                     self.b_list[l-1] -= (alpha/batch_size)*self.grad_b[l-1]
                     self.W_list[l-1] -= (alpha/batch_size)*self.grad_W[l-1]
             
+            # if iteration%()==0:
+            cost = self.eval_cost(X,y)
+            acc = self.accuracy(X,y)
+            self.cost_arr['train'].append(cost)
+            self.acc_arr['train'].append(acc)
+            test_acc = self.accuracy(X_test,y_test)
+            test_cost = self.eval_cost(X_test,y_test)
+            self.cost_arr['test'].append(test_cost)
+            self.acc_arr['test'].append(test_acc)
             print("iteration: {0} ".format(iteration),end="  ")
-            print(" ",self.eval_cost(X,y),end=" ")
-            print("  ",self.accuracy(X,y)," ")
+            print(" ",cost,end=" ")
+            print("  ",acc," ",test_acc)
+
+            if (test_acc-max(self.acc_arr['test']))<-0.008:
+                break
 
     def eval_cost(self, X, y):
         cost = 0
@@ -118,7 +137,7 @@ class MLP:
             # forward propogation
             self.forward_prop(X[i])
             cost += np.sum((self.A[self.L]-y[i].reshape(-1,1))**2)
-        return cost
+        return cost/(2*X.shape[0])
 
     def accuracy(self, X, y):
         acc = 0
@@ -147,6 +166,60 @@ class MLP:
             y_pred[i] = np.argmax(self.A[self.L])
         return y_pred
 
+
+def start_run():
+    # m = number of feature vectors
+    m = X_train.shape[0]
+    # n = number of features
+    n = X_train.shape[1]
+
+    alpha = 0.5
+    max_iter = 500
+
+    # number of neurons in each layer
+    Layers = [n,16,16,2]
+    activations = ['sigmoid','sigmoid','sigmoid']
+    # Layers = [n,12,1]
+    batch_size = 8
+
+    start_time = time.time()
+
+    model = MLP(Layers, activations)
+    model.train(X_train, y_train, alpha, batch_size, max_iter)
+
+    end_time = time.time()
+
+    print("Test Accuracy", model.accuracy(X_test,y_test))
+    conf = model.conf_mat(X_test,y_test)
+    print("Confusion matrix", conf)
+    # print("accuracy_conf: ", (conf[0][0]+conf[1][1])/(np.sum(conf)))
+    test_acc = model.accuracy(X_test,y_test)
+    print("Test accuracy: ", test_acc)
+
+    with open(f'./Results/mlp/log.txt', 'a+') as logfile:
+        logfile.write(f'\n\nalpha = {alpha} max_iter = {max_iter} batch_size = {batch_size} \n {Layers[1:3]}\n{conf} \n test_accuracy = {test_acc} \n time taken = {end_time-start_time}')
+
+    plt.figure()
+    plt.title(f'Cost Function vs iteration plot {Layers}\n alpha={alpha} max_iter={max_iter} batch_size={batch_size}')
+    plt.xlabel("iteration")
+    plt.ylabel("cost")
+    plt.plot(model.cost_arr['train'],c='c',label='training set avg cost')
+    plt.plot(model.cost_arr['test'], c='r',label='testing set avg cost')
+    plt.legend(loc='upper right')
+    plt.savefig(f"./Results/mlp/{alpha}_{max_iter}_{batch_size}_{Layers[1:3]}_cost_iter.png")
+    plt.show()
+
+    plt.figure()
+    plt.title(f"Accuracy vs iteration plot {Layers} \n alpha={alpha} max_iter={max_iter} batch_size={batch_size}")
+    plt.xlabel("iteration")
+    plt.ylabel("accuracy")
+    plt.plot(model.acc_arr['train'],c='c',label='training set accuracy')
+    plt.plot(model.acc_arr['test'], c='r',label='testing set accuracy')
+    plt.legend(loc='upper left')
+    plt.savefig(f"./Results/mlp/{alpha}_{max_iter}_{batch_size}_{Layers[1:3]}_acc_iter.png")
+    plt.show()
+
+    return model
     
 if __name__=='__main__':
         
@@ -165,31 +238,24 @@ if __name__=='__main__':
         scaler.fit(X[:,j])
         X[:,j] = scaler.transform(X[:,j])
 
-    train_percent = 0.6
-    X_train = X[:int(train_percent*X.shape[0])]
-    y_train = y_cat[:int(train_percent*X.shape[0])]
-    X_test = X[int(train_percent*X.shape[0]):]
-    y_test = y_cat[int(train_percent*X.shape[0]):]
+    # give 'holdout' for hold-out cross validation split
+    # or 'kfold' for k-fold cross validation split.
+    split = 'holdout'
+    if split=='holdout':
+        train_percent = 0.6
+        X_train = X[:int(train_percent*X.shape[0])]
+        y_train = y_cat[:int(train_percent*X.shape[0])]
+        X_test = X[int(train_percent*X.shape[0]):]
+        y_test = y_cat[int(train_percent*X.shape[0]):]
+        model = start_run()
+    elif split=='kfold':
+        k_fold = 4
+        Nk = X.shape[0]//k_fold
+        models = []
+        for i in range(0, X.shape[0], Nk):
+            X_test = X[i:i+Nk,:]
+            X_train = np.delete(X,range(i,i+Nk),0)
+            y_test = y_cat[i:i+Nk]
+            y_train = np.delete(y_cat,range(i,i+Nk),0)
 
-    # m = number of feature vectors
-    m = X_train.shape[0]
-    # n = number of features
-    n = X_train.shape[1]
-
-    alpha = 0.5
-    max_iter = 25
-
-    # number of neurons in each layer
-    Layers = [n,16,8,2]
-    activations = ['sigmoid','sigmoid','sigmoid']
-    # Layers = [n,12,1]
-    batch_size = 32
-
-    model = MLP(Layers, activations)
-    model.train(X_train, y_train, alpha, batch_size, max_iter)
-
-    # print("Test Accuracy", model.accuracy(X_test,y_test))
-    conf = model.conf_mat(X_test,y_test)
-    print("Confusion matrix", conf)
-    print("accuracy_conf: ", (conf[0][0]+conf[1][1])/(np.sum(conf)))
-    print("accuracy: ", model.accuracy(X_test,y_test))
+            models.append(start_run())

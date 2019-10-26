@@ -69,7 +69,7 @@ if __name__ == "__main__":
     model = LinearRegression_Vectorized()
     
     # data input
-    data = pd.read_excel("./data.xlsx", header=None)
+    data = pd.read_csv("./3D_spatial_network.csv", header=None)[::]
     X = data.loc[:,0:1].values
     y = data.loc[:,2].values
 

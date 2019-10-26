@@ -13,9 +13,10 @@ class KMeans:
         self.assignments = pd.Series([random.randint(0,k-1) for i in range(X.shape[0])])
         self.centers = X.iloc[[random.randint(0,X.shape[0]-1) for i in range(k)]]
         self.cost_arr = []
+        print("init finished")
         
     def get_dist(self,a,b):
-        return np.sum(np.square(a-b),axis=1)
+        return np.sum((a-b)**2,axis=1)
         
     def get_cost(self):
         cost = 0
@@ -30,15 +31,18 @@ class KMeans:
             # assigning points to their nearest center
             print("iteration: {0}".format(iteration))
             for i in range(self.X.shape[0]):
-                nearest_center_i = np.sum(np.square(self.X.iloc[i]-self.centers), axis=1).values.argmin()
+                nearest_center_i = np.sum((self.X.iloc[i]-self.centers)**2, axis=1).values.argmin()
                 self.assignments[i] = nearest_center_i
-            self.get_cost()
+            print("centers assigned")
+            # self.get_cost()
             # calculating mean of each cluster
             for i in range(self.k):
                 self.centers.iloc[i] = np.mean(self.X[self.assignments==i])
+            print("centers recalculated")
             if len(self.cost_arr)>1 and abs(self.cost_arr[-2]-self.cost_arr[-1])==0:
                 break
             print("*****\n")
+        print(self.get_cost())
 
 # if __name__ == "__main__":
 #     # data input
