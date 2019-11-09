@@ -77,3 +77,59 @@ alpha = 0.5 max_iter = 500 batch_size = 8
  [ 42. 391.]] 
  test_accuracy = 0.9104651162790698 
  time taken = 126.62201452255249
+
+alpha = 0.5 max_iter = 500 batch_size = 8 
+ [16, 16]
+[[411.   0.]
+ [449.   0.]] 
+ test_accuracy = 0.363953488372093 
+ time taken = 2.741701126098633
+
+alpha = 0.3 max_iter = 500 batch_size = 8 
+ [16, 16]
+[[390.  36.]
+ [ 43. 391.]] 
+ test_accuracy = 0.9081395348837209 
+ time taken = 202.3927767276764
+
+alpha = 0.3 max_iter = 200 batch_size = 8 
+ [16, 16]
+[[225.  30.]
+ [ 37. 245.]] 
+ test_accuracy = 0.8752327746741154 
+ time taken = 87.87593698501587
+
+alpha = 0.3 max_iter = 200 batch_size = 8 
+ [16, 16]
+[[267.  17.]
+ [ 33. 220.]] 
+ test_accuracy = 0.9068901303538175 
+ time taken = 313.63548946380615
+
+alpha = 0.3 max_iter = 200 batch_size = 8 
+ [16, 16]
+[[246.  24.]
+ [ 19. 248.]] 
+ test_accuracy = 0.9199255121042831 
+ time taken = 442.96686458587646
+
+alpha = 0.3 max_iter = 200 batch_size = 8 
+ [16, 16]
+[[217.  49.]
+ [ 34. 237.]] 
+ test_accuracy = 0.845437616387337 
+ time taken = 27.275072813034058
+
+alpha = 0.3 max_iter = 200 batch_size = 8 
+ [100, 50]
+[[394.  47.]
+ [ 41. 378.]] 
+ test_accuracy = 0.8976744186046511 
+ time taken = 1082.1833589076996
+
+alpha = 0.3 max_iter = 200 batch_size = 12 
+ [16, 16]
+[[383.  49.]
+ [ 33. 395.]] 
+ test_accuracy = 0.9046511627906977 
+ time taken = 530.7998671531677

@@ -1,0 +1,57 @@
+
+
+alpha = 0.5 max_iter = 130 batch_size = 12 
+ [16, 16]
+[[238.  24.]
+ [ 22. 253.]] 
+ test_accuracy = 0.9143389199255121 
+ time taken = 367.8173015117645
+
+alpha = 0.5 max_iter = 130 batch_size = 12 
+ [16, 16]
+[[226.  30.]
+ [ 30. 251.]] 
+ test_accuracy = 0.888268156424581 
+ time taken = 287.62183117866516
+
+alpha = 0.5 max_iter = 130 batch_size = 12 
+ [16, 16]
+[[265.  21.]
+ [ 22. 229.]] 
+ test_accuracy = 0.9199255121042831 
+ time taken = 404.65393233299255
+
+alpha = 0.5 max_iter = 130 batch_size = 12 
+ [16, 16]
+[[236.  35.]
+ [ 27. 239.]] 
+ test_accuracy = 0.8845437616387337 
+ time taken = 405.24731516838074
+
+alpha = 0.5 max_iter = 130 batch_size = 12 
+ [16, 16]
+[[232.  26.]
+ [ 32. 247.]] iter=1 
+ test_accuracy = 0.8919925512104283 
+ time taken = 191.3552439212799
+
+alpha = 0.5 max_iter = 130 batch_size = 12 
+ [16, 16]
+[[247.  28.]
+ [ 30. 232.]] iter=2 
+ test_accuracy = 0.8919925512104283 
+ time taken = 198.6521134376526
+
+alpha = 0.5 max_iter = 130 batch_size = 12 
+ [16, 16]
+[[238.  32.]
+ [ 29. 238.]] iter=3 
+ test_accuracy = 0.8864059590316573 
+ time taken = 179.28882575035095
+
+alpha = 0.5 max_iter = 130 batch_size = 12 
+ [16, 16]
+[[239.  33.]
+ [ 21. 244.]] iter=4 
+ test_accuracy = 0.8994413407821229 
+ time taken = 192.32587265968323

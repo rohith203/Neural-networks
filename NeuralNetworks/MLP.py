@@ -83,7 +83,7 @@ class MLP:
         for l in range(1,self.L+1):
             self.A[l] = self.activation(self.compute_Z(l), self.activ_arr[l-1])
     
-    def train(self, X, y, alpha, batch_size, max_iter):
+    def train(self, X, y,X_test, y_test, alpha, batch_size, max_iter):
         '''
         This function takes the training data and target values,
         applies forward propogation, then applies backward propogation
@@ -127,8 +127,8 @@ class MLP:
             print(" ",cost,end=" ")
             print("  ",acc," ",test_acc)
 
-            if (test_acc-max(self.acc_arr['test']))<-0.008:
-                break
+            # if (test_acc-max(self.acc_arr['test']))<-0.008:
+            #     break
 
     def eval_cost(self, X, y):
         cost = 0
@@ -144,10 +144,12 @@ class MLP:
         for i in range(y.shape[0]):
             # forward propogation
             self.forward_prop(X[i])
-            t1 = 0 if self.A[self.L][0][0]<0.5 else 1
-            t2 = 0 if self.A[self.L][1][0]<0.5 else 1
-
-            acc += ((t1==y[i][0]) and (t2==y[i][1]))
+            t1 = np.argmax(self.A[self.L])
+            yt = np.argmax(y[i])
+            # t1 = 0 if self.A[self.L][0][0]<0.5 else 1
+            # t2 = 0 if self.A[self.L][1][0]<0.5 else 1
+            acc += (t1==yt)
+            # acc += ((t1==y[i][0]) and (t2==y[i][1]))
         return acc/y.shape[0]
 
     def conf_mat(self, X, y):
@@ -174,18 +176,19 @@ def start_run():
     n = X_train.shape[1]
 
     alpha = 0.5
-    max_iter = 500
+    max_iter = 130
 
     # number of neurons in each layer
     Layers = [n,16,16,2]
     activations = ['sigmoid','sigmoid','sigmoid']
-    # Layers = [n,12,1]
-    batch_size = 8
+    # Layers = [n,100,50,30,2]
+    # activations = ['sigmoid','sigmoid','sigmoid','sigmoid']
+    batch_size = 12
 
     start_time = time.time()
 
     model = MLP(Layers, activations)
-    model.train(X_train, y_train, alpha, batch_size, max_iter)
+    model.train(X_train, y_train, X_test, y_test, alpha, batch_size, max_iter)
 
     end_time = time.time()
 
@@ -196,9 +199,10 @@ def start_run():
     test_acc = model.accuracy(X_test,y_test)
     print("Test accuracy: ", test_acc)
 
-    with open(f'./Results/mlp/log.txt', 'a+') as logfile:
-        logfile.write(f'\n\nalpha = {alpha} max_iter = {max_iter} batch_size = {batch_size} \n {Layers[1:3]}\n{conf} \n test_accuracy = {test_acc} \n time taken = {end_time-start_time}')
+    with open(f'./Results/mlp/kfold/log.txt', 'a+') as logfile:
+        logfile.write(f'\n\nalpha = {alpha} max_iter = {max_iter} batch_size = {batch_size} \n {Layers[1:3]}\n{conf} iter={iterat} \n test_accuracy = {test_acc} \n time taken = {end_time-start_time}')
 
+    # Results Visualization
     plt.figure()
     plt.title(f'Cost Function vs iteration plot {Layers}\n alpha={alpha} max_iter={max_iter} batch_size={batch_size}')
     plt.xlabel("iteration")
@@ -206,8 +210,8 @@ def start_run():
     plt.plot(model.cost_arr['train'],c='c',label='training set avg cost')
     plt.plot(model.cost_arr['test'], c='r',label='testing set avg cost')
     plt.legend(loc='upper right')
-    plt.savefig(f"./Results/mlp/{alpha}_{max_iter}_{batch_size}_{Layers[1:3]}_cost_iter.png")
-    plt.show()
+    plt.savefig(f"./Results/mlp/kfold/{alpha}_{max_iter}_{batch_size}_{Layers[1:3]}_cost_iter_iter_{iterat}.png")
+    # plt.show()
 
     plt.figure()
     plt.title(f"Accuracy vs iteration plot {Layers} \n alpha={alpha} max_iter={max_iter} batch_size={batch_size}")
@@ -216,8 +220,8 @@ def start_run():
     plt.plot(model.acc_arr['train'],c='c',label='training set accuracy')
     plt.plot(model.acc_arr['test'], c='r',label='testing set accuracy')
     plt.legend(loc='upper left')
-    plt.savefig(f"./Results/mlp/{alpha}_{max_iter}_{batch_size}_{Layers[1:3]}_acc_iter.png")
-    plt.show()
+    plt.savefig(f"./Results/mlp/kfold/{alpha}_{max_iter}_{batch_size}_{Layers[1:3]}_acc_iter_iter_{iterat}.png")
+    # plt.show()
 
     return model
     
@@ -240,7 +244,7 @@ if __name__=='__main__':
 
     # give 'holdout' for hold-out cross validation split
     # or 'kfold' for k-fold cross validation split.
-    split = 'holdout'
+    split = 'kfold'
     if split=='holdout':
         train_percent = 0.6
         X_train = X[:int(train_percent*X.shape[0])]
@@ -249,13 +253,21 @@ if __name__=='__main__':
         y_test = y_cat[int(train_percent*X.shape[0]):]
         model = start_run()
     elif split=='kfold':
-        k_fold = 4
+        k_fold = 5
         Nk = X.shape[0]//k_fold
         models = []
-        for i in range(0, X.shape[0], Nk):
+        acc = []
+        iterat = 1
+        for i in range(0, X.shape[0]-Nk+1, Nk):
+            print("\n\nk fold iteration: ", iterat)
             X_test = X[i:i+Nk,:]
             X_train = np.delete(X,range(i,i+Nk),0)
             y_test = y_cat[i:i+Nk]
             y_train = np.delete(y_cat,range(i,i+Nk),0)
 
             models.append(start_run())
+            acc.append(models[-1].accuracy(X_test,y_test))
+            iterat+=1
+        
+        print("Average Accuracy: ", np.mean(acc))
+            

@@ -27,3 +27,1625 @@
  k = 4 function = <function gaussian at 0x7ffb97d21ea0> max_iter = 20 cost = 0.4450278070782823  accuracy = 1.0
 
  k = 4 function = <function gaussian at 0x7ffb97d21ea0> max_iter = 20 cost = 0.4450278070782823  accuracy = 1.0
+
+ k = 4 function = <function gaussian at 0x00000135EA4447B8> max_iter = 20 cost = 0.5883565418801676  accuracy = 1.0
+
+ k = 4 function = <function gaussian at 0x00000135EA4447B8> max_iter = 20 cost = 0.49396100213862265  accuracy = 1.0
+
+ k = 4 function = <function gaussian at 0x00000135EA4447B8> max_iter = 20 cost = 0.4942687373722494  accuracy = 1.0018621973929236
+
+ k = 4 function = <function gaussian at 0x00000135EA4447B8> max_iter = 20 cost = 0.4973661374083154  accuracy = 0.9981378026070763
+
+ k = 4 function = <function gaussian at 0x0000024F8C4547B8> max_iter = 20 cost = 0.49226926336056626  accuracy = 0.0
+
+ k = 4 function = <function gaussian at 0x0000024F8C4547B8> max_iter = 20 cost = 2.231515387465622  accuracy = 0.0
+
+ k = 4 function = <function gaussian at 0x0000024F8C4547B8> max_iter = 20 cost = 0.4902124986458626  accuracy = 0.0
+
+ k = 4 function = <function gaussian at 0x0000024F8C4547B8> max_iter = 20 cost = 0.4891601176052252  accuracy = 0.0
+
+ k = 4 function = <function gaussian at 0x00000186050B47B8> max_iter = 20 cost = 0.48423311887343395  accuracy = 0.0
+
+ k = 4 function = <function gaussian at 0x00000186050B47B8> max_iter = 20 cost = 0.5653622103995497  accuracy = 0.0
+
+ k = 4 function = <function gaussian at 0x00000186050B47B8> max_iter = 20 cost = 0.5002114872809216  accuracy = 0.0
+
+ k = 4 function = <function gaussian at 0x00000186050B47B8> max_iter = 20 cost = 1.2095418212289248  accuracy = 0.0
+
+ k = 4 function = <function gaussian at 0x000002BBB137DBF8> max_iter = 20 cost = 0.5148911051194136  accuracy = 0.0
+
+ k = 4 function = <function gaussian at 0x000002BBB137DBF8> max_iter = 20 cost = 0.4890100972869913  accuracy = 0.0
+
+ k = 4 function = <function gaussian at 0x000002BBB137DBF8> max_iter = 20 cost = 0.49543698175660666  accuracy = 0.0
+
+ k = 4 function = <function gaussian at 0x000002BBB137DBF8> max_iter = 20 cost = 0.4892385146302606  accuracy = 0.0
+
+ k = 4 function = <function gaussian at 0x00000133FDDACD90> max_iter = 20 cost = 0.4863919353473382  accuracy = 0.0
+
+ k = 4 function = <function gaussian at 0x00000133FDDACD90> max_iter = 20 cost = 0.4983013176327423  accuracy = 0.0
+
+ k = 4 function = <function gaussian at 0x00000133FDDACD90> max_iter = 20 cost = 1.7226116970687382  accuracy = 0.0
+
+ k = 4 function = <function gaussian at 0x00000133FDDACD90> max_iter = 20 cost = 0.48598831879040444  accuracy = 0.0
+
+ k = 4 function = <function gaussian at 0x00000133813C01E0> max_iter = 20 cost = 0.513816502446869  accuracy = 0.0
+
+ k = 4 function = <function gaussian at 0x00000133FDDAFE18> max_iter = 20 cost = 0.49022803416302024  accuracy = 0.0
+
+ k = 4 function = <function gaussian at 0x00000133813C0840> max_iter = 20 cost = 0.5172090162205366  accuracy = 510
+
+ k = 4 function = <function gaussian at 0x00000133813C0730> max_iter = 20 cost = 0.48785205770845025  accuracy = 0.5255813953488372
+
+ k = 4 function = <function gaussian at 0x00000133FB003AE8> max_iter = 100 cost = 0.48580158453251193  accuracy = 0.5069767441860465
+
+ k = 4 function = <function multiquadric at 0x00000133813C0488> max_iter = 100 cost = 0.22232263499667673  accuracy = 0.6430232558139535
+
+ k = 6 function = <function multiquadric at 0x00000133813C00D0> max_iter = 100 cost = 0.20559044114908914  accuracy = 0.7104651162790697
+
+ k = 10 function = <function multiquadric at 0x00000133812F18C8> max_iter = 100 cost = 0.15073517290747623  accuracy = 0.8058139534883721
+
+ k = 16 function = <function multiquadric at 0x00000133813C0840> max_iter = 100 cost = 0.1513913341315139  accuracy = 0.7744186046511627
+
+ k = 14 function = <function multiquadric at 0x00000133813C08C8> max_iter = 100 cost = 0.14948045717121236  accuracy = 0.8011627906976744
+
+ k = 15 function = <function multiquadric at 0x00000133812ED9D8> max_iter = 100 cost = 0.14056370383241218  accuracy = 0.8244186046511628
+
+ k = 15 function = <function multiquadric at 0x00000133812F1598> max_iter = 100 cost = 0.13912776228898513  accuracy = 0.8119180633147114
+
+ k = 15 function = <function multiquadric at 0x00000133812F1598> max_iter = 100 cost = 0.14753019831929265  accuracy = 0.8044692737430168
+
+ k = 15 function = <function multiquadric at 0x00000133812F1598> max_iter = 100 cost = 0.1476862622258122  accuracy = 0.7877094972067039
+
+ k = 15 function = <function multiquadric at 0x00000133812F1598> max_iter = 100 cost = 0.13378156468587407  accuracy = 0.8230912476722533
+
+ k = 15 function = <function multiquadric at 0x00000133813C0510> max_iter = 100 cost = 0.13459226984609368  accuracy = 0.8212290502793296
+
+ k = 15 function = <function multiquadric at 0x00000133813C0510> max_iter = 100 cost = 0.1488136768991547  accuracy = 0.8119180633147114
+
+ k = 15 function = <function multiquadric at 0x00000133813C0510> max_iter = 100 cost = 0.13311844237901022  accuracy = 0.8268156424581006
+
+ k = 15 function = <function multiquadric at 0x00000133813C0510> max_iter = 100 cost = 0.14457150383614562  accuracy = 0.7821229050279329
+
+ k = 15 function = <function multiquadric at 0x00000133813C0488> max_iter = 100 cost = 0.14400003436940456  accuracy = 0.7988826815642458
+
+ k = 15 function = <function multiquadric at 0x00000133813C0488> max_iter = 100 cost = 0.13741842361395346  accuracy = 0.8119180633147114
+
+ k = 15 function = <function multiquadric at 0x00000133813C0488> max_iter = 100 cost = 0.12815344096434886  accuracy = 0.8379888268156425
+
+ k = 15 function = <function multiquadric at 0x00000133813C0488> max_iter = 100 cost = 0.14068725310112346  accuracy = 0.8156424581005587
+
+ k = 15 function = <function multiquadric at 0x000001D3B68DF1E0> max_iter = 100 cost = 0.14562792792726284  accuracy = 0.8026070763500931
+
+ k = 15 function = <function multiquadric at 0x000001D3B68DF1E0> max_iter = 100 cost = 0.14028957968789732  accuracy = 0.819366852886406
+
+ k = 15 function = <function multiquadric at 0x000001D3B68DF1E0> max_iter = 100 cost = 0.12951070014053798  accuracy = 0.8007448789571695
+
+ k = 15 function = <function multiquadric at 0x000001D3B68DF1E0> max_iter = 100 cost = 0.14752705237115402  accuracy = 0.7802607076350093
+
+ k = 15 function = <function multiquadric at 0x000001D3B68DF048> max_iter = 100 cost = 0.1468039340393043  accuracy = 0.8249534450651769
+
+ k = 15 function = <function multiquadric at 0x000001D3B68DF048> max_iter = 100 cost = 0.1521970246690602  accuracy = 0.8044692737430168
+
+ k = 15 function = <function multiquadric at 0x000001D3B68DF048> max_iter = 100 cost = 0.1737234716782381  accuracy = 0.7914338919925512
+
+ k = 15 function = <function multiquadric at 0x000001D3B68DF048> max_iter = 100 cost = 0.1443657606991672  accuracy = 0.8081936685288641
+
+ k = 15 function = <function gaussian at 0x000001D3B4923AE8> max_iter = 100 cost = 0.14413668126645424  accuracy = 0.8212290502793296
+
+ k = 15 function = <function gaussian at 0x000001D3B4923AE8> max_iter = 100 cost = 0.15220465220826543  accuracy = 0.7951582867783985
+
+ k = 15 function = <function gaussian at 0x000001D3B4923AE8> max_iter = 100 cost = 0.15285070232333395  accuracy = 0.8100558659217877
+
+ k = 15 function = <function gaussian at 0x000001D3BC9A2A60> max_iter = 100 cost = 0.49741340128283734  accuracy = 0.6238361266294227
+
+ k = 15 function = <function gaussian at 0x000001D3BC9A2A60> max_iter = 100 cost = 0.4990780689529642  accuracy = 0.664804469273743
+
+ k = 15 function = <function gaussian at 0x000001D3B9EF2D90> max_iter = 100 cost = 0.7335862086119666  accuracy = 0.6405959031657356
+
+ k = 15 function = <function gaussian at 0x000001D3B9EF2D90> max_iter = 100 cost = 7.057603605532609  accuracy = 0.6797020484171322
+
+ k = 15 function = <function gaussian at 0x000001D3B9EF2D90> max_iter = 100 cost = 0.5002823324885739  accuracy = 0.6014897579143389
+
+ k = 15 function = <function gaussian at 0x000001D3B9EF2D90> max_iter = 100 cost = 3.68593228213909  accuracy = 0.6368715083798883
+
+ k = 15 function = <function multiquadric at 0x000001FB27532488> max_iter = 100 cost = 0.13775041069016364  accuracy = 0.8230912476722533
+
+ k = 15 function = <function multiquadric at 0x000001FB27532488> max_iter = 100 cost = 0.13731680042619843  accuracy = 0.813780260707635
+
+ k = 15 function = <function multiquadric at 0x000001FB27532488> max_iter = 100 cost = 0.1501863994271853  accuracy = 0.7914338919925512
+
+ k = 15 function = <function multiquadric at 0x000001FB27532488> max_iter = 100 cost = 0.13437386405519505  accuracy = 0.8417132216014898
+
+ k = 15 function = <function linear at 0x000001FB275326A8> max_iter = 100 cost = 0.14560447406663854  accuracy = 0.8081936685288641
+
+ k = 15 function = <function linear at 0x000001FB275326A8> max_iter = 100 cost = 0.1267770935376225  accuracy = 0.8417132216014898
+
+ k = 15 function = <function linear at 0x000001FB275326A8> max_iter = 100 cost = 0.14005872855455226  accuracy = 0.7951582867783985
+
+ k = 15 function = <function linear at 0x000001FB275326A8> max_iter = 100 cost = 0.13612507349111355  accuracy = 0.8324022346368715
+
+ k = 15 function = <function linear at 0x0000014B73F55A60> max_iter = 100 cost = 0.128185435191425  accuracy = 0.845437616387337
+
+ k = 15 function = <function linear at 0x0000014B73F55A60> max_iter = 100 cost = 0.14643047474179471  accuracy = 0.7988826815642458
+
+ k = 15 function = <function linear at 0x0000014B73F55A60> max_iter = 100 cost = 0.1442523714152463  accuracy = 0.813780260707635
+
+ k = 15 function = <function linear at 0x0000014B73F55A60> max_iter = 100 cost = 0.13714365758786076  accuracy = 0.813780260707635
+
+ k = 15 function = <function linear at 0x0000014B71871378> max_iter = 100 cost = 0.13069226731492398  accuracy = 0.839851024208566
+
+ k = 15 function = <function linear at 0x0000014B71871378> max_iter = 100 cost = 0.13579320888650523  accuracy = 0.8342644320297952
+
+ k = 15 function = <function linear at 0x0000014B71871378> max_iter = 100 cost = 0.14076023993856804  accuracy = 0.8100558659217877
+
+ k = 15 function = <function linear at 0x0000014B71871378> max_iter = 100 cost = 0.14064955259668616  accuracy = 0.8268156424581006
+
+ k = 15 function = <function gaussian at 0x0000014B73F5D6A8> max_iter = 100 cost = 0.13931411272057362  accuracy = 0.8268156424581006
+
+ k = 15 function = <function gaussian at 0x0000014B6EBFFBF8> max_iter = 100 cost = 0.15678984114216074  accuracy = 0.7988826815642458
+
+ k = 15 function = <function gaussian at 0x0000014B6EBFFBF8> max_iter = 100 cost = 0.14188051480024289  accuracy = 0.839851024208566
+
+ k = 15 function = <function gaussian at 0x0000014B6EBFFBF8> max_iter = 100 cost = 0.1467792492064913  accuracy = 0.839851024208566
+
+ k = 15 function = <function gaussian at 0x0000014B6EBFFBF8> max_iter = 100 cost = 0.15774159691426817  accuracy = 0.7802607076350093
+
+ k = 15 function = <function gaussian at 0x0000014B74256488> max_iter = 100 cost = 0.1564040102147273  accuracy = 0.8249534450651769
+
+ k = 15 function = <function gaussian at 0x0000014B74256488> max_iter = 100 cost = 0.15546914618773944  accuracy = 0.8100558659217877
+
+ k = 15 function = <function gaussian at 0x0000014B74256488> max_iter = 100 cost = 0.15578282447890915  accuracy = 0.7932960893854749
+
+ k = 15 function = <function gaussian at 0x0000014B74256488> max_iter = 100 cost = 0.14346395775613743  accuracy = 0.8249534450651769
+
+ k = 15 function = <function gaussian at 0x0000014B73F55840> max_iter = 100 cost = 0.16156013475594108  accuracy = 0.7932960893854749
+
+ k = 15 function = <function gaussian at 0x0000014B70AD9378> max_iter = 100 cost = 0.14667185548686357  accuracy = 0.8305400372439479
+
+ k = 15 function = <function gaussian at 0x0000014B70AD9378> max_iter = 100 cost = 0.15082035961412305  accuracy = 0.7970204841713222
+
+ k = 15 function = <function gaussian at 0x0000014B70AD9378> max_iter = 100 cost = 0.157542367250134  accuracy = 0.7951582867783985
+
+ k = 15 function = <function gaussian at 0x0000014B70AD9378> max_iter = 100 cost = 0.1590572789056642  accuracy = 0.7951582867783985
+
+ k = 40 function = <function gaussian at 0x0000014B73F5D9D8> max_iter = 100 cost = 0.1304976166020326  accuracy = 0.8566108007448789
+
+ k = 40 function = <function gaussian at 0x0000014B73F5D9D8> max_iter = 100 cost = 0.1226541231544959  accuracy = 0.8566108007448789
+
+ k = 10 function = <function gaussian at 0x0000014B741AE840> max_iter = 100 cost = 0.1600922427693692  accuracy = 0.8119180633147114
+
+ k = 10 function = <function gaussian at 0x0000014B741AE840> max_iter = 100 cost = 0.15634034746972972  accuracy = 0.7970204841713222
+
+ k = 10 function = <function gaussian at 0x0000014B741AE840> max_iter = 100 cost = 0.16717512303637624  accuracy = 0.7616387337057728
+
+ k = 10 function = <function gaussian at 0x0000014B741AE840> max_iter = 100 cost = 0.16010673635368858  accuracy = 0.7970204841713222
+
+ k = 10 function = <function gaussian at 0x0000014B6EBFFD08> max_iter = 100 cost = 0.15900058792353217  accuracy = 0.7932960893854749
+
+ k = 10 function = <function gaussian at 0x0000014B6EBFFD08> max_iter = 100 cost = 0.15060878491452873  accuracy = 0.7988826815642458
+
+ k = 10 function = <function gaussian at 0x0000014B6EBFFD08> max_iter = 100 cost = 0.15270195127019076  accuracy = 0.8286778398510242
+
+ k = 10 function = <function gaussian at 0x0000014B6EBFFD08> max_iter = 100 cost = 0.18700412282774886  accuracy = 0.7690875232774674
+
+ k = 10 function = <function gaussian at 0x0000014B74256C80> max_iter = 100 cost = 0.16909620125459585  accuracy = 0.7597765363128491
+
+ k = 10 function = <function gaussian at 0x0000014B74256C80> max_iter = 100 cost = 0.1531845729041215  accuracy = 0.8230912476722533
+
+ k = 10 function = <function gaussian at 0x0000014B74256C80> max_iter = 100 cost = 0.16415364771449176  accuracy = 0.7932960893854749
+
+ k = 4 function = cubic max_iter = 2 cost = 21.61639793432216  accuracy = 0.9988372093023256
+
+ k = 10
+function = <function gaussian at 0x000002203F069488>
+max_iter = 100
+ cost = 0.16238886305969277  accuracy = 0.7951582867783985 
+conf_mat=
+[[214.  54.]
+ [ 56. 213.]]
+
+ k = 10
+function = <function gaussian at 0x000002A80C889488>
+max_iter = 100
+ cost = 0.17445890857460356  accuracy = 0.8081936685288641 
+conf_mat=
+[[210.  51.]
+ [ 52. 224.]]
+
+ k = 10
+function = <function gaussian at 0x000001EC36289488>
+max_iter = 100
+ cost = 0.15642345681768724  accuracy = 0.7858472998137802 
+conf_mat=
+[[225.  74.]
+ [ 41. 197.]]
+
+ k = 10
+function = <function gaussian at 0x000001EC36289488>
+max_iter = 100
+ cost = 0.17514047941247313  accuracy = 0.7858472998137802 
+conf_mat=
+[[207.  47.]
+ [ 68. 215.]]
+
+ k = 10
+function = <function gaussian at 0x000001EC36289488>
+max_iter = 100
+ cost = 0.16013370293502535  accuracy = 0.7858472998137802 
+conf_mat=
+[[201.  64.]
+ [ 51. 221.]]
+
+ k = 10
+function = <function gaussian at 0x000001EC36289488>
+max_iter = 100
+ cost = 0.15589222325790222  accuracy = 0.7932960893854749 
+conf_mat=
+[[209.  48.]
+ [ 63. 217.]]
+
+ k = 15
+function = <function gaussian at 0x000001E61C8C9488>
+max_iter = 100
+ cost = 0.14915848653531588  accuracy = 0.8119180633147114 
+conf_mat=
+[[230.  54.]
+ [ 47. 206.]]
+
+ k = 15
+function = <function gaussian at 0x000001E61C8C9488>
+max_iter = 100
+ cost = 0.15244554188051246  accuracy = 0.8119180633147114 
+conf_mat=
+[[208.  66.]
+ [ 35. 228.]]
+
+ k = 15
+function = <function gaussian at 0x000001E61C8C9488>
+max_iter = 100
+ cost = 0.1567652542202995  accuracy = 0.8007448789571695 
+conf_mat=
+[[225.  50.]
+ [ 57. 205.]]
+
+ k = 15
+function = <function gaussian at 0x000001E61C8C9488>
+max_iter = 100
+ cost = 0.1495971051846929  accuracy = 0.8305400372439479 
+conf_mat=
+[[204.  38.]
+ [ 53. 242.]]
+
+ k = 25
+function = <function gaussian at 0x000002B42CEF9488>
+max_iter = 100
+ cost = 0.14438792497445224  accuracy = 0.8119180633147114 
+conf_mat=
+[[215.  47.]
+ [ 54. 221.]]
+
+ k = 25
+function = <function gaussian at 0x000002B42CEF9488>
+max_iter = 100
+ cost = 0.14549034394235447  accuracy = 0.8026070763500931 
+conf_mat=
+[[222.  63.]
+ [ 43. 209.]]
+
+ k = 25
+function = <function gaussian at 0x000001C8D8C09488>
+max_iter = 100
+ cost = 0.13856065322272232  accuracy = 0.8305400372439479 
+conf_mat=
+[[209.  45.]
+ [ 46. 237.]]
+
+ k = 25
+function = <function gaussian at 0x000001C8D8C09488>
+max_iter = 100
+ cost = 0.15277472158808553  accuracy = 0.8081936685288641 
+conf_mat=
+[[208.  53.]
+ [ 50. 226.]]
+
+ k = 25
+function = <function gaussian at 0x0000028698309488>
+max_iter = 100
+ cost = 0.1426483667031602  accuracy = 0.8275058275058275 
+conf_mat=
+[[183.  42.]
+ [ 32. 172.]]
+
+iteration: 1
+ k = 25
+function = <function gaussian at 0x0000025F24D29488>
+max_iter = 100
+ cost = 0.1569696084772793  accuracy = 0.7902097902097902 
+conf_mat=
+[[167.  40.]
+ [ 50. 172.]]
+
+iteration: 2
+ k = 25
+function = <function gaussian at 0x0000025F24D29488>
+max_iter = 100
+ cost = 0.15030560079475042  accuracy = 0.8438228438228438 
+conf_mat=
+[[164.  40.]
+ [ 27. 198.]]
+
+iteration: 1
+ k = 25
+function = <function gaussian at 0x000001A2F8E89488>
+max_iter = 100
+ cost = 0.13216415502124904  accuracy = 0.8461538461538461 
+conf_mat=
+[[167.  39.]
+ [ 27. 196.]]
+
+iteration: 1
+ k = 25
+function = <function gaussian at 0x000001D1DACF9488>
+max_iter = 100
+ cost = 0.14502394140395947  accuracy = 0.8018648018648019 
+conf_mat=
+[[178.  48.]
+ [ 37. 166.]]
+
+iteration: 2
+ k = 25
+function = <function gaussian at 0x000001D1DACF9488>
+max_iter = 100
+ cost = 0.14839792626080592  accuracy = 0.7925407925407926 
+conf_mat=
+[[180.  54.]
+ [ 35. 160.]]
+
+iteration: 1
+ k = 25
+function = <function multiquadric at 0x000001A569D93620>
+max_iter = 100
+ cost = 0.15217402017452966  accuracy = 0.8041958041958042 
+conf_mat=
+[[170.  43.]
+ [ 41. 175.]]
+
+iteration: 2
+ k = 25
+function = <function multiquadric at 0x000001A569D93620>
+max_iter = 100
+ cost = 0.14633636071869893  accuracy = 0.8111888111888111 
+conf_mat=
+[[173.  41.]
+ [ 40. 175.]]
+
+iteration: 3
+ k = 25
+function = <function multiquadric at 0x000001A569D93620>
+max_iter = 100
+ cost = 0.14190736316802052  accuracy = 0.8438228438228438 
+conf_mat=
+[[171.  36.]
+ [ 31. 191.]]
+
+iteration: 4
+ k = 25
+function = <function multiquadric at 0x000001A569D93620>
+max_iter = 100
+ cost = 0.1604490365963921  accuracy = 0.7902097902097902 
+conf_mat=
+[[168.  61.]
+ [ 29. 171.]]
+
+iteration: 5
+ k = 25
+function = <function multiquadric at 0x000001A569D93620>
+max_iter = 100
+ cost = 0.14408247201458318  accuracy = 0.8298368298368298 
+conf_mat=
+[[173.  37.]
+ [ 36. 183.]]
+
+iteration: 6
+ k = 25
+function = <function multiquadric at 0x000001A569D93620>
+max_iter = 100
+ cost = 0.051432794643917756  accuracy = 1.0 
+conf_mat=
+[[2. 0.]
+ [0. 1.]]
+
+iteration: 1
+ k = 25
+function = <function multiquadric at 0x000001C861533620>
+max_iter = 100
+ cost = 0.19376614230991118  accuracy = 0.8100558659217877 
+conf_mat=
+[[214.  45.]
+ [ 57. 221.]]
+
+iteration: 2
+ k = 25
+function = <function multiquadric at 0x000001C861533620>
+max_iter = 100
+ cost = 0.13987794258273167  accuracy = 0.8286778398510242 
+conf_mat=
+[[212.  59.]
+ [ 33. 233.]]
+
+iteration: 3
+ k = 25
+function = <function multiquadric at 0x000001C861533620>
+max_iter = 100
+ cost = 0.1513579834097844  accuracy = 0.7895716945996276 
+conf_mat=
+[[223.  61.]
+ [ 52. 201.]]
+
+iteration: 4
+ k = 25
+function = <function multiquadric at 0x000001C861533620>
+max_iter = 100
+ cost = 0.14939708369904725  accuracy = 0.8007448789571695 
+conf_mat=
+[[193.  68.]
+ [ 39. 237.]]
+
+iteration: 1
+ k = 25
+function = <function multiquadric at 0x0000026414903620>
+max_iter = 100
+ cost = 0.150208344100673  accuracy = 0.8088578088578089 
+conf_mat=
+[[164.  51.]
+ [ 31. 183.]]
+
+iteration: 2
+ k = 25
+function = <function multiquadric at 0x0000026414903620>
+max_iter = 100
+ cost = 0.15275119912833487  accuracy = 0.7948717948717948 
+conf_mat=
+[[170.  44.]
+ [ 44. 171.]]
+
+iteration: 3
+ k = 25
+function = <function multiquadric at 0x0000026414903620>
+max_iter = 100
+ cost = 0.15070913928072224  accuracy = 0.8088578088578089 
+conf_mat=
+[[179.  47.]
+ [ 35. 168.]]
+
+iteration: 4
+ k = 25
+function = <function multiquadric at 0x0000026414903620>
+max_iter = 100
+ cost = 0.18920976662771644  accuracy = 0.8251748251748252 
+conf_mat=
+[[171.  39.]
+ [ 36. 183.]]
+
+iteration: 5
+ k = 25
+function = <function multiquadric at 0x0000026414903620>
+max_iter = 100
+ cost = 0.13491722275977527  accuracy = 0.8368298368298368 
+conf_mat=
+[[165.  44.]
+ [ 26. 194.]]
+
+iteration: 6
+ k = 25
+function = <function multiquadric at 0x0000026414903620>
+max_iter = 100
+ cost = 0.42221421805392834  accuracy = 0.3333333333333333 
+conf_mat=
+[[0. 1.]
+ [1. 1.]]
+
+iteration: 1
+ k = 25
+function = <function multiquadric at 0x00000205CEF13620>
+max_iter = 100
+ cost = 0.13973148087275172  accuracy = 0.8088578088578089 
+conf_mat=
+[[164.  41.]
+ [ 41. 183.]]
+
+iteration: 2
+ k = 25
+function = <function multiquadric at 0x00000205CEF13620>
+max_iter = 100
+ cost = 0.16067183775099386  accuracy = 0.8321678321678322 
+conf_mat=
+[[168.  50.]
+ [ 22. 189.]]
+
+iteration: 3
+ k = 25
+function = <function multiquadric at 0x00000205CEF13620>
+max_iter = 100
+ cost = 0.16114521505042834  accuracy = 0.7785547785547785 
+conf_mat=
+[[162.  49.]
+ [ 46. 172.]]
+
+iteration: 4
+ k = 25
+function = <function multiquadric at 0x00000205CEF13620>
+max_iter = 100
+ cost = 0.15078665846807324  accuracy = 0.8111888111888111 
+conf_mat=
+[[190.  39.]
+ [ 42. 158.]]
+
+iteration: 5
+ k = 25
+function = <function multiquadric at 0x00000205CEF13620>
+max_iter = 100
+ cost = 0.13233599442321267  accuracy = 0.8344988344988346 
+conf_mat=
+[[184.  28.]
+ [ 43. 174.]]
+
+iteration: 6
+ k = 25
+function = <function multiquadric at 0x00000205CEF13620>
+max_iter = 100
+ cost = 0.05951013127844074  accuracy = 1.0 
+conf_mat=
+[[0. 0.]
+ [0. 3.]]
+
+iteration: 1
+ k = 25
+function = <function multiquadric at 0x000001DDABD12620>
+max_iter = 100
+ cost = 0.1476442168896788  accuracy = 0.8298368298368298 
+conf_mat=
+[[180.  51.]
+ [ 22. 176.]]
+
+iteration: 2
+ k = 25
+function = <function multiquadric at 0x000001DDABD12620>
+max_iter = 100
+ cost = 0.2015349711902103  accuracy = 0.8321678321678322 
+conf_mat=
+[[190.  42.]
+ [ 30. 167.]]
+
+iteration: 3
+ k = 25
+function = <function multiquadric at 0x000001DDABD12620>
+max_iter = 100
+ cost = 0.13765592701425894  accuracy = 0.8508158508158508 
+conf_mat=
+[[181.  29.]
+ [ 35. 184.]]
+
+iteration: 4
+ k = 25
+function = <function multiquadric at 0x000001DDABD12620>
+max_iter = 100
+ cost = 0.14642341888908939  accuracy = 0.7972027972027972 
+conf_mat=
+[[159.  39.]
+ [ 48. 183.]]
+
+iteration: 5
+ k = 25
+function = <function multiquadric at 0x000001DDABD12620>
+max_iter = 100
+ cost = 0.15655081931374099  accuracy = 0.8041958041958042 
+conf_mat=
+[[164.  38.]
+ [ 46. 181.]]
+
+iteration: 6
+ k = 25
+function = <function multiquadric at 0x000001DDABD12620>
+max_iter = 100
+ cost = 0.09897678525785475  accuracy = 1.0 
+conf_mat=
+[[2. 0.]
+ [0. 1.]]
+
+iteration: 1
+ k = 25
+function = <function multiquadric at 0x00000217F5582620>
+max_iter = 100
+ cost = 0.14473906683485915  accuracy = 0.8088578088578089 
+conf_mat=
+[[172.  45.]
+ [ 37. 175.]]
+
+iteration: 2
+ k = 25
+function = <function multiquadric at 0x00000217F5582620>
+max_iter = 100
+ cost = 0.15776651599875388  accuracy = 0.8181818181818182 
+conf_mat=
+[[180.  48.]
+ [ 30. 171.]]
+
+iteration: 3
+ k = 25
+function = <function multiquadric at 0x00000217F5582620>
+max_iter = 100
+ cost = 0.14692850710294467  accuracy = 0.8181818181818182 
+conf_mat=
+[[164.  43.]
+ [ 35. 187.]]
+
+iteration: 4
+ k = 25
+function = <function multiquadric at 0x00000217F5582620>
+max_iter = 100
+ cost = 0.12598810364414417  accuracy = 0.8414918414918415 
+conf_mat=
+[[181.  34.]
+ [ 34. 180.]]
+
+iteration: 5
+ k = 25
+function = <function multiquadric at 0x00000217F5582620>
+max_iter = 100
+ cost = 0.15642911757937478  accuracy = 0.7785547785547785 
+conf_mat=
+[[157.  50.]
+ [ 45. 177.]]
+
+iteration: 1
+ k = 25
+function = <function multiquadric at 0x000001E02C982620>
+max_iter = 100
+ cost = 0.1504248146963305  accuracy = 0.8088578088578089 
+conf_mat=
+[[165.  37.]
+ [ 45. 182.]]
+
+iteration: 2
+ k = 25
+function = <function multiquadric at 0x000001E02C982620>
+max_iter = 100
+ cost = 0.18397794714702986  accuracy = 0.7832167832167832 
+conf_mat=
+[[172.  48.]
+ [ 45. 164.]]
+
+iteration: 3
+ k = 25
+function = <function multiquadric at 0x000001E02C982620>
+max_iter = 100
+ cost = 0.14482173972057505  accuracy = 0.8018648018648019 
+conf_mat=
+[[163.  50.]
+ [ 35. 181.]]
+
+iteration: 4
+ k = 25
+function = <function multiquadric at 0x000001E02C982620>
+max_iter = 100
+ cost = 0.13531116668675605  accuracy = 0.8275058275058275 
+conf_mat=
+[[177.  35.]
+ [ 39. 178.]]
+
+iteration: 5
+ k = 25
+function = <function multiquadric at 0x000001E02C982620>
+max_iter = 100
+ cost = 0.14848953891672467  accuracy = 0.7925407925407926 
+conf_mat=
+[[173.  53.]
+ [ 36. 167.]]
+
+iteration: 1
+ k = 25
+function = <function multiquadric at 0x00000262EA4E2620>
+max_iter = 100
+ cost = 0.1760166560909537  accuracy = 0.8275058275058275 
+conf_mat=
+[[173.  39.]
+ [ 35. 182.]]
+
+iteration: 2
+ k = 25
+function = <function multiquadric at 0x00000262EA4E2620>
+max_iter = 100
+ cost = 0.1478377912931465  accuracy = 0.8065268065268065 
+conf_mat=
+[[164.  35.]
+ [ 48. 182.]]
+
+iteration: 3
+ k = 25
+function = <function multiquadric at 0x00000262EA4E2620>
+max_iter = 100
+ cost = 0.13938124514335826  accuracy = 0.8205128205128205 
+conf_mat=
+[[177.  45.]
+ [ 32. 175.]]
+
+iteration: 4
+ k = 25
+function = <function multiquadric at 0x00000262EA4E2620>
+max_iter = 100
+ cost = 0.1367134949117491  accuracy = 0.8041958041958042 
+conf_mat=
+[[182.  52.]
+ [ 32. 163.]]
+
+iteration: 5
+ k = 25
+function = <function multiquadric at 0x00000262EA4E2620>
+max_iter = 100
+ cost = 0.14951447599089362  accuracy = 0.7902097902097902 
+conf_mat=
+[[160.  47.]
+ [ 43. 179.]]
+
+iteration: 1
+ k = 25
+function = <function linear at 0x00000209D1638950>
+max_iter = 100
+ cost = 0.12231299238699592  accuracy = 0.8461538461538461 
+conf_mat=
+[[174.  36.]
+ [ 30. 189.]]
+
+iteration: 2
+ k = 25
+function = <function linear at 0x00000209D1638950>
+max_iter = 100
+ cost = 0.13840101758463036  accuracy = 0.8158508158508159 
+conf_mat=
+[[167.  47.]
+ [ 32. 183.]]
+
+iteration: 3
+ k = 25
+function = <function linear at 0x00000209D1638950>
+max_iter = 100
+ cost = 0.1433560005992566  accuracy = 0.8181818181818182 
+conf_mat=
+[[184.  41.]
+ [ 37. 167.]]
+
+iteration: 4
+ k = 25
+function = <function linear at 0x00000209D1638950>
+max_iter = 100
+ cost = 0.13723673883964946  accuracy = 0.8298368298368298 
+conf_mat=
+[[183.  40.]
+ [ 33. 173.]]
+
+iteration: 5
+ k = 25
+function = <function linear at 0x00000209D1638950>
+max_iter = 100
+cost = 0.12286836990289848  
+accuracy = 0.8461538461538461 
+conf_mat=
+[[168.  34.]
+ [ 32. 195.]]
+Avg Accuracy: 0.8312354312354312
+
+iteration: 1
+ k = 25
+function = <function gaussian at 0x00000157F42C9488>
+max_iter = 100
+ cost = 0.14364902662174175  accuracy = 0.8135198135198135 
+conf_mat=
+[[167.  46.]
+ [ 34. 182.]]
+
+iteration: 2
+ k = 25
+function = <function gaussian at 0x00000157F42C9488>
+max_iter = 100
+ cost = 0.1424090948848918  accuracy = 0.8228438228438228 
+conf_mat=
+[[164.  50.]
+ [ 26. 189.]]
+
+iteration: 1
+ k = 5
+function = <function gaussian at 0x0000016258089488>
+max_iter = 100
+ cost = 0.23959450414053324  accuracy = 0.5664335664335665 
+conf_mat=
+[[127.  82.]
+ [104. 116.]]
+
+iteration: 1
+ k = 25
+function = <function gaussian at 0x00000234172F9488>
+max_iter = 100
+ cost = 0.15466258870535618  accuracy = 0.7878787878787878 
+conf_mat=
+[[162.  51.]
+ [ 40. 176.]]
+
+iteration: 1
+ k = 25
+function = <function gaussian at 0x000001ABDF5C9488>
+max_iter = 100
+ cost = 0.13987938014873882  accuracy = 0.8275058275058275 
+conf_mat=
+[[172.  50.]
+ [ 24. 183.]]
+
+iteration: 1
+ k = 25
+function = <function gaussian at 0x000001FE11A29488>
+max_iter = 100
+ cost = 0.13547821301485172  accuracy = 0.8368298368298368 
+conf_mat=
+[[182.  42.]
+ [ 28. 177.]]
+
+iteration: 2
+ k = 25
+function = <function gaussian at 0x000001FE11A29488>
+max_iter = 100
+ cost = 0.15122816367689695  accuracy = 0.7902097902097902 
+conf_mat=
+[[156.  55.]
+ [ 35. 183.]]
+
+iteration: 3
+ k = 25
+function = <function gaussian at 0x000001FE11A29488>
+max_iter = 100
+ cost = 0.13982931289047415  accuracy = 0.8344988344988346 
+conf_mat=
+[[181.  34.]
+ [ 37. 177.]]
+
+iteration: 4
+ k = 25
+function = <function gaussian at 0x000001FE11A29488>
+max_iter = 100
+ cost = 0.14553608004561866  accuracy = 0.7808857808857809 
+conf_mat=
+[[164.  50.]
+ [ 44. 171.]]
+
+iteration: 1
+ k = 25
+function = <function gaussian at 0x0000016CED569488>
+max_iter = 100
+ cost = 0.1370062643310201  accuracy = 0.8344988344988346 
+conf_mat=
+[[184.  40.]
+ [ 31. 174.]]
+
+iteration: 1
+ k = 25
+function = <function gaussian at 0x000002725A869488>
+max_iter = 100
+ cost = 0.14143228568048097  accuracy = 0.8111888111888111 
+conf_mat=
+[[176.  53.]
+ [ 28. 172.]]
+
+iteration: 2
+ k = 25
+function = <function gaussian at 0x000002725A869488>
+max_iter = 100
+ cost = 0.13982479512074708  accuracy = 0.8181818181818182 
+conf_mat=
+[[167.  43.]
+ [ 35. 184.]]
+
+iteration: 3
+ k = 25
+function = <function gaussian at 0x000002725A869488>
+max_iter = 100
+ cost = 0.1509308889032975  accuracy = 0.7925407925407926 
+conf_mat=
+[[163.  45.]
+ [ 44. 177.]]
+
+iteration: 1
+ k = 25
+function = <function gaussian at 0x00000289FCA42840>
+max_iter = 100
+ cost = 0.6150450026332681  accuracy = 0.6488372093023256 
+conf_mat=
+[[187. 233.]
+ [ 69. 371.]]
+
+iteration: 1
+ k = 25
+function = <function gaussian at 0x0000028983110400>
+max_iter = 100
+ cost = 0.5403640470247469  accuracy = 0.5883720930232558 
+conf_mat=
+[[417.  15.]
+ [339.  89.]]
+
+iteration: 1
+ k = 25
+function = <function gaussian at 0x00000289FD960510>
+max_iter = 100
+ cost = 0.5052787729537858  accuracy = 0.5431235431235432 
+conf_mat=
+[[ 72. 146.]
+ [ 50. 161.]]
+
+iteration: 1
+ k = 25
+function = <function gaussian at 0x0000028983520BF8>
+max_iter = 100
+ cost = 0.4049941764004201  accuracy = 0.5034965034965035 
+conf_mat=
+[[ 16. 209.]
+ [  4. 200.]]
+
+iteration: 2
+ k = 25
+function = <function gaussian at 0x0000028983520BF8>
+max_iter = 100
+ cost = 0.6936456017265086  accuracy = 0.5268065268065268 
+conf_mat=
+[[  4. 203.]
+ [  0. 222.]]
+
+iteration: 3
+ k = 25
+function = <function gaussian at 0x0000028983520BF8>
+max_iter = 100
+ cost = 1.8455568205111674  accuracy = 0.5337995337995338 
+conf_mat=
+[[ 23. 191.]
+ [  9. 206.]]
+
+iteration: 4
+ k = 25
+function = <function gaussian at 0x0000028983520BF8>
+max_iter = 100
+ cost = 0.4585621776421531  accuracy = 0.5244755244755245 
+conf_mat=
+[[ 20. 191.]
+ [ 13. 205.]]
+
+iteration: 5
+ k = 25
+function = <function gaussian at 0x0000028983520BF8>
+max_iter = 100
+ cost = 0.3871691799380087  accuracy = 0.5104895104895105 
+conf_mat=
+[[  7. 209.]
+ [  1. 212.]]
+Avg Accuracy: 0.5198135198135198
+
+iteration: 1
+ k = 25
+function = <function gaussian at 0x0000028989355AE8>
+max_iter = 100
+ cost = 0.4807226142712555  accuracy = 0.5431235431235432 
+conf_mat=
+[[  5. 196.]
+ [  0. 228.]]
+
+iteration: 2
+ k = 25
+function = <function gaussian at 0x0000028989355AE8>
+max_iter = 100
+ cost = 165.9982641031865  accuracy = 0.675990675990676 
+conf_mat=
+[[138.  91.]
+ [ 48. 152.]]
+
+iteration: 3
+ k = 25
+function = <function gaussian at 0x0000028989355AE8>
+max_iter = 100
+ cost = 0.9376455565602766  accuracy = 0.6876456876456877 
+conf_mat=
+[[103. 114.]
+ [ 20. 192.]]
+
+iteration: 4
+ k = 25
+function = <function gaussian at 0x0000028989355AE8>
+max_iter = 100
+ cost = 2.2448470078944713  accuracy = 0.5874125874125874 
+conf_mat=
+[[206.   4.]
+ [173.  46.]]
+
+iteration: 5
+ k = 25
+function = <function gaussian at 0x0000028989355AE8>
+max_iter = 100
+ cost = 2.1542171286923097  accuracy = 0.6177156177156177 
+conf_mat=
+[[188.  28.]
+ [136.  77.]]
+Avg Accuracy: 0.6223776223776224
+
+iteration: 1
+ k = 50
+function = <function gaussian at 0x0000028989355A60>
+max_iter = 30
+ cost = 0.6596370108569954  accuracy = 0.6573426573426573 
+conf_mat=
+[[209.  11.]
+ [136.  73.]]
+
+iteration: 2
+ k = 50
+function = <function gaussian at 0x0000028989355A60>
+max_iter = 30
+ cost = 0.5721711065287245  accuracy = 0.5920745920745921 
+conf_mat=
+[[188.  11.]
+ [164.  66.]]
+
+iteration: 3
+ k = 50
+function = <function gaussian at 0x0000028989355A60>
+max_iter = 30
+ cost = 47.72657329985899  accuracy = 0.6853146853146853 
+conf_mat=
+[[134. 100.]
+ [ 35. 160.]]
+
+iteration: 4
+ k = 50
+function = <function gaussian at 0x0000028989355A60>
+max_iter = 30
+ cost = 289.0841164445099  accuracy = 0.6783216783216783 
+conf_mat=
+[[157.  57.]
+ [ 81. 134.]]
+
+iteration: 5
+ k = 50
+function = <function gaussian at 0x0000028989355A60>
+max_iter = 30
+ cost = 0.5945239728130931  accuracy = 0.6806526806526807 
+conf_mat=
+[[186.  21.]
+ [116. 106.]]
+Avg Accuracy: 0.6587412587412588
+
+iteration: 1
+ k = 50
+function = <function multiquadric at 0x0000028989355AE8>
+max_iter = 30
+ cost = 0.10934115801355514  accuracy = 0.8624708624708625 
+conf_mat=
+[[186.  34.]
+ [ 25. 184.]]
+
+iteration: 2
+ k = 50
+function = <function multiquadric at 0x0000028989355AE8>
+max_iter = 30
+ cost = 0.1083143405583759  accuracy = 0.8601398601398601 
+conf_mat=
+[[175.  31.]
+ [ 29. 194.]]
+
+iteration: 3
+ k = 50
+function = <function multiquadric at 0x0000028989355AE8>
+max_iter = 30
+ cost = 0.098712598484133  accuracy = 0.8927738927738927 
+conf_mat=
+[[180.  26.]
+ [ 20. 203.]]
+
+iteration: 4
+ k = 50
+function = <function multiquadric at 0x0000028989355AE8>
+max_iter = 30
+ cost = 0.1140074330162231  accuracy = 0.8531468531468531 
+conf_mat=
+[[187.  31.]
+ [ 32. 179.]]
+
+iteration: 5
+ k = 50
+function = <function multiquadric at 0x0000028989355AE8>
+max_iter = 30
+ cost = 0.10734187264273927  accuracy = 0.8648018648018648 
+conf_mat=
+[[187.  35.]
+ [ 23. 184.]]
+Avg Accuracy: 0.8666666666666666
+
+iteration: 1
+ k = 50
+function = <function linear at 0x00000289875268C8>
+max_iter = 30
+ cost = 0.10712875218626548  accuracy = 0.8741258741258742 
+conf_mat=
+[[182.  26.]
+ [ 28. 193.]]
+
+iteration: 2
+ k = 50
+function = <function linear at 0x00000289875268C8>
+max_iter = 30
+ cost = 0.11341578408128268  accuracy = 0.8461538461538461 
+conf_mat=
+[[183.  38.]
+ [ 28. 180.]]
+
+iteration: 3
+ k = 50
+function = <function linear at 0x00000289875268C8>
+max_iter = 30
+ cost = 0.10419850412794204  accuracy = 0.8764568764568764 
+conf_mat=
+[[190.  18.]
+ [ 35. 186.]]
+
+iteration: 4
+ k = 50
+function = <function linear at 0x00000289875268C8>
+max_iter = 30
+ cost = 0.12035238325485238  accuracy = 0.8391608391608392 
+conf_mat=
+[[192.  38.]
+ [ 31. 168.]]
+
+iteration: 5
+ k = 50
+function = <function linear at 0x00000289875268C8>
+max_iter = 30
+ cost = 0.12020988998843934  accuracy = 0.8601398601398601 
+conf_mat=
+[[170.  37.]
+ [ 23. 199.]]
+Avg Accuracy: 0.8592074592074592
+
+iteration: 1
+ k = 50
+function = <function gaussian at 0x000002898902AEA0>
+max_iter = 30
+ cost = 208.85054502920724  accuracy = 0.6666666666666666 
+conf_mat=
+[[118. 103.]
+ [ 40. 168.]]
+
+iteration: 2
+ k = 50
+function = <function gaussian at 0x000002898902AEA0>
+max_iter = 30
+ cost = 19.63596061797348  accuracy = 0.7668997668997669 
+conf_mat=
+[[217.  23.]
+ [ 77. 112.]]
+
+iteration: 3
+ k = 50
+function = <function gaussian at 0x000002898902AEA0>
+max_iter = 30
+ cost = 0.47922035742565955  accuracy = 0.6130536130536131 
+conf_mat=
+[[ 23. 166.]
+ [  0. 240.]]
+
+iteration: 4
+ k = 50
+function = <function gaussian at 0x000002898902AEA0>
+max_iter = 30
+ cost = 0.702774148402626  accuracy = 0.6317016317016317 
+conf_mat=
+[[118. 102.]
+ [ 56. 153.]]
+
+iteration: 5
+ k = 50
+function = <function gaussian at 0x000002898902AEA0>
+max_iter = 30
+ cost = 0.6982759740229042  accuracy = 0.62004662004662 
+conf_mat=
+[[163.  40.]
+ [123. 103.]]
+Avg Accuracy: 0.6596736596736597
+
+iteration: 1
+ k = 50
+function = <function gaussian at 0x000001D5E7191488>
+max_iter = 30
+ cost = 0.11265279353851473  accuracy = 0.8624708624708625 
+conf_mat=
+[[189.  24.]
+ [ 35. 181.]]
+
+iteration: 2
+ k = 50
+function = <function gaussian at 0x000001D5E7191488>
+max_iter = 30
+ cost = 0.12039813209031747  accuracy = 0.8531468531468531 
+conf_mat=
+[[180.  24.]
+ [ 39. 186.]]
+
+iteration: 3
+ k = 50
+function = <function gaussian at 0x000001D5E7191488>
+max_iter = 30
+ cost = 0.13210501973533093  accuracy = 0.8461538461538461 
+conf_mat=
+[[176.  32.]
+ [ 34. 187.]]
+
+iteration: 4
+ k = 50
+function = <function gaussian at 0x000001D5E7191488>
+max_iter = 30
+ cost = 0.16733601963655229  accuracy = 0.8158508158508159 
+conf_mat=
+[[169.  53.]
+ [ 26. 181.]]
+
+iteration: 5
+ k = 50
+function = <function gaussian at 0x000001D5E7191488>
+max_iter = 30
+ cost = 0.1281959459178753  accuracy = 0.8648018648018648 
+conf_mat=
+[[199.  28.]
+ [ 30. 172.]]
+Avg Accuracy: 0.8484848484848486
+
+iteration: 1
+ k = 50
+function = <function gaussian at 0x000001D5E7191840>
+max_iter = 30
+ cost = 0.11755844235219755  accuracy = 0.8601398601398601 
+conf_mat=
+[[180.  19.]
+ [ 41. 189.]]
+
+iteration: 2
+ k = 50
+function = <function gaussian at 0x000001D5E7191840>
+max_iter = 30
+ cost = 0.1238564225997727  accuracy = 0.8391608391608392 
+conf_mat=
+[[183.  32.]
+ [ 37. 177.]]
+
+iteration: 3
+ k = 50
+function = <function gaussian at 0x000001D5E7191840>
+max_iter = 30
+ cost = 0.13925503605877376  accuracy = 0.8228438228438228 
+conf_mat=
+[[163.  47.]
+ [ 29. 190.]]
+
+iteration: 4
+ k = 50
+function = <function gaussian at 0x000001D5E7191840>
+max_iter = 30
+ cost = 0.13260989552457697  accuracy = 0.8531468531468531 
+conf_mat=
+[[192.  33.]
+ [ 30. 174.]]
+
+iteration: 5
+ k = 50
+function = <function gaussian at 0x000001D5E7191840>
+max_iter = 30
+ cost = 0.12103795308152443  accuracy = 0.8648018648018648 
+conf_mat=
+[[193.  30.]
+ [ 28. 178.]]
+Avg Accuracy: 0.848018648018648
+
+iteration: 1
+ k = 50
+function = <function gaussian at 0x000001D5E80470D0>
+max_iter = 30
+ cost = 0.1356084421607313  accuracy = 0.8321678321678322 
+conf_mat=
+[[172.  41.]
+ [ 31. 185.]]
+
+iteration: 2
+ k = 50
+function = <function gaussian at 0x000001D5E80470D0>
+max_iter = 30
+ cost = 0.1195787392318027  accuracy = 0.8554778554778555 
+conf_mat=
+[[190.  31.]
+ [ 31. 177.]]
+
+iteration: 3
+ k = 50
+function = <function gaussian at 0x000001D5E80470D0>
+max_iter = 30
+ cost = 0.12915792071929952  accuracy = 0.8368298368298368 
+conf_mat=
+[[169.  34.]
+ [ 36. 190.]]
+
+iteration: 4
+ k = 50
+function = <function gaussian at 0x000001D5E80470D0>
+max_iter = 30
+ cost = 0.13529267783698445  accuracy = 0.8111888111888111 
+conf_mat=
+[[175.  43.]
+ [ 38. 173.]]
+
+iteration: 5
+ k = 50
+function = <function gaussian at 0x000001D5E80470D0>
+max_iter = 30
+ cost = 0.11687473395859416  accuracy = 0.8554778554778555 
+conf_mat=
+[[193.  26.]
+ [ 36. 174.]]
+Avg Accuracy: 0.8382284382284382
+
+iteration: 1
+ k = 50
+function = <function multiquadric at 0x000001D5ED6396A8>
+max_iter = 30
+ cost = 0.12894339484184483  accuracy = 0.8368298368298368 
+conf_mat=
+[[170.  42.]
+ [ 28. 189.]]
+
+iteration: 2
+ k = 50
+function = <function multiquadric at 0x000001D5ED6396A8>
+max_iter = 30
+ cost = 0.12443430666603156  accuracy = 0.8531468531468531 
+conf_mat=
+[[187.  29.]
+ [ 34. 179.]]
+
+iteration: 3
+ k = 50
+function = <function multiquadric at 0x000001D5ED6396A8>
+max_iter = 30
+ cost = 0.12482897305937178  accuracy = 0.8438228438228438 
+conf_mat=
+[[179.  25.]
+ [ 42. 183.]]
+
+iteration: 4
+ k = 50
+function = <function multiquadric at 0x000001D5ED6396A8>
+max_iter = 30
+ cost = 0.12475934767582723  accuracy = 0.8484848484848485 
+conf_mat=
+[[183.  30.]
+ [ 35. 181.]]
+
+iteration: 5
+ k = 50
+function = <function multiquadric at 0x000001D5ED6396A8>
+max_iter = 30
+ cost = 0.2646588407342156  accuracy = 0.8391608391608392 
+conf_mat=
+[[191.  39.]
+ [ 30. 169.]]
+Avg Accuracy: 0.8442890442890443
+
+iteration: 1
+ k = 50
+function = <function multiquadric at 0x000001D5E817D598>
+max_iter = 30
+ cost = 0.1332145789430664  accuracy = 0.8531468531468531 
+conf_mat=
+[[183.  29.]
+ [ 34. 183.]]
+
+iteration: 2
+ k = 50
+function = <function multiquadric at 0x000001D5E817D598>
+max_iter = 30
+ cost = 0.1311109596900795  accuracy = 0.8298368298368298 
+conf_mat=
+[[181.  34.]
+ [ 39. 175.]]
+
+iteration: 3
+ k = 50
+function = <function multiquadric at 0x000001D5E817D598>
+max_iter = 30
+ cost = 0.16742886013582947  accuracy = 0.8578088578088578 
+conf_mat=
+[[176.  36.]
+ [ 25. 192.]]
+
+iteration: 4
+ k = 50
+function = <function multiquadric at 0x000001D5E817D598>
+max_iter = 30
+ cost = 0.12865237872610774  accuracy = 0.8461538461538461 
+conf_mat=
+[[176.  35.]
+ [ 31. 187.]]
+
+iteration: 5
+ k = 50
+function = <function multiquadric at 0x000001D5E817D598>
+max_iter = 30
+ cost = 0.13357465930068504  accuracy = 0.8135198135198135 
+conf_mat=
+[[177.  46.]
+ [ 34. 172.]]
+Avg Accuracy: 0.8400932400932402
+
+iteration: 1
+ k = 50
+function = <function multiquadric at 0x000001D5ED639620>
+max_iter = 30
+ cost = 0.1281010587175988  accuracy = 0.8578088578088578 
+conf_mat=
+[[182.  30.]
+ [ 31. 186.]]
+
+iteration: 2
+ k = 50
+function = <function multiquadric at 0x000001D5ED639620>
+max_iter = 30
+ cost = 0.13504372491380148  accuracy = 0.8391608391608392 
+conf_mat=
+[[180.  34.]
+ [ 35. 180.]]
+
+iteration: 3
+ k = 50
+function = <function multiquadric at 0x000001D5ED639620>
+max_iter = 30
+ cost = 0.14094327191240583  accuracy = 0.8041958041958042 
+conf_mat=
+[[175.  45.]
+ [ 39. 170.]]
+
+iteration: 4
+ k = 50
+function = <function multiquadric at 0x000001D5ED639620>
+max_iter = 30
+ cost = 0.11177006006949651  accuracy = 0.8624708624708625 
+conf_mat=
+[[186.  26.]
+ [ 33. 184.]]
+
+iteration: 5
+ k = 50
+function = <function multiquadric at 0x000001D5ED639620>
+max_iter = 30
+ cost = 0.11878027395114374  accuracy = 0.8554778554778555 
+conf_mat=
+[[184.  31.]
+ [ 31. 183.]]
+Avg Accuracy: 0.8438228438228439
+
+iteration: 1
+ k = 50
+function = <function gaussian at 0x000001D5E7191730>
+max_iter = 30
+ cost = 0.1331342322989426  accuracy = 0.8438228438228438 
+conf_mat=
+[[177.  35.]
+ [ 32. 185.]]
+
+iteration: 2
+ k = 50
+function = <function gaussian at 0x000001D5E7191730>
+max_iter = 30
+ cost = 0.13447119041893205  accuracy = 0.8275058275058275 
+conf_mat=
+[[167.  35.]
+ [ 39. 188.]]
+
+iteration: 3
+ k = 50
+function = <function gaussian at 0x000001D5E7191730>
+max_iter = 30
+ cost = 0.11782207618134423  accuracy = 0.8508158508158508 
+conf_mat=
+[[187.  32.]
+ [ 32. 178.]]
+
+iteration: 4
+ k = 50
+function = <function gaussian at 0x000001D5E7191730>
+max_iter = 30
+ cost = 0.12811693124021806  accuracy = 0.8391608391608392 
+conf_mat=
+[[190.  40.]
+ [ 29. 170.]]
+
+iteration: 5
+ k = 50
+function = <function gaussian at 0x000001D5E7191730>
+max_iter = 30
+ cost = 0.1417911632921012  accuracy = 0.8368298368298368 
+conf_mat=
+[[182.  29.]
+ [ 41. 177.]]
+Avg Accuracy: 0.8396270396270396
+
+iteration: 1
+ k = 50
+function = <function linear at 0x000001D5EAEDF840>
+max_iter = 30
+ cost = 0.11550470545582738  accuracy = 0.8648018648018648 
+conf_mat=
+[[179.  36.]
+ [ 22. 192.]]
+
+iteration: 2
+ k = 50
+function = <function linear at 0x000001D5EAEDF840>
+max_iter = 30
+ cost = 0.1306211602503553  accuracy = 0.8321678321678322 
+conf_mat=
+[[169.  35.]
+ [ 37. 188.]]
+
+iteration: 3
+ k = 50
+function = <function linear at 0x000001D5EAEDF840>
+max_iter = 30
+ cost = 0.10703102909519147  accuracy = 0.8717948717948718 
+conf_mat=
+[[212.  30.]
+ [ 25. 162.]]
+
+iteration: 4
+ k = 50
+function = <function linear at 0x000001D5EAEDF840>
+max_iter = 30
+ cost = 0.11502803725230505  accuracy = 0.8601398601398601 
+conf_mat=
+[[170.  36.]
+ [ 24. 199.]]
+
+iteration: 5
+ k = 50
+function = <function linear at 0x000001D5EAEDF840>
+max_iter = 30
+ cost = 0.11306227811837886  accuracy = 0.8508158508158508 
+conf_mat=
+[[179.  27.]
+ [ 37. 186.]]
+Avg Accuracy: 0.8559440559440559
+
+iteration: 1
+ k = 50
+function = <function linear at 0x000001D5ED6399D8>
+max_iter = 30
+ cost = 0.10932858771888981  accuracy = 0.872093023255814 
+conf_mat=
+[[347.  51.]
+ [ 59. 403.]]
+
+iteration: 1
+ k = 50
+function = <function multiquadric at 0x000001D5E817D598>
+max_iter = 30
+ cost = 0.15861561066805005  accuracy = 0.8406976744186047 
+conf_mat=
+[[382.  54.]
+ [ 83. 341.]]
+
+iteration: 1
+ k = 50
+function = <function gaussian at 0x000001D5E71917B8>
+max_iter = 30
+ cost = 0.13094991361528405  accuracy = 0.827906976744186 
+conf_mat=
+[[342.  89.]
+ [ 59. 370.]]
