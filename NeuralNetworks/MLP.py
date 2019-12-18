@@ -83,7 +83,7 @@ class MLP:
         for l in range(1,self.L+1):
             self.A[l] = self.activation(self.compute_Z(l), self.activ_arr[l-1])
     
-    def train(self, X, y,X_test, y_test, alpha, batch_size, max_iter):
+    def train(self, X, y, X_test, y_test, alpha, batch_size, max_iter):
         '''
         This function takes the training data and target values,
         applies forward propogation, then applies backward propogation
